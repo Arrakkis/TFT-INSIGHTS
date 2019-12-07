@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 
 class Home extends React.Component {
 	nameRef = React.createRef();
+	regionRef = React.createRef();
 
 	searchSummoner = event => {
 		event.preventDefault();
-		console.log(this.nameRef);
-		this.props.history.push(`/profile/${this.nameRef.current.value}`);
+		this.props.history.push(
+			`/profile/${this.regionRef.current.value}/${this.nameRef.current.value}`
+		);
 	};
 
 	render() {
@@ -30,9 +32,10 @@ class Home extends React.Component {
 						placeholder="Summoner Name"
 						ref={this.nameRef}
 					/>
-					<select className="summoner-search-region">
+					<select className="summoner-search-region" ref={this.regionRef}>
 						<option value="NA">NA</option>
 						<option value="EU">EU</option>
+						<option value="KR">KR</option>
 					</select>
 					<button type="submit" className="summoner-search-submit">
 						&raquo;
