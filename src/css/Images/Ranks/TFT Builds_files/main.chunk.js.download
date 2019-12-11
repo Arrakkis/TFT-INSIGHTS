@@ -1,0 +1,1819 @@
+(this["webpackJsonptftbuilds"] = this["webpackJsonptftbuilds"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/App.css":
+/*!****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/css/App.css ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+var urlEscape = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/url-escape.js */ "./node_modules/css-loader/dist/runtime/url-escape.js");
+var ___CSS_LOADER_URL___0___ = urlEscape(__webpack_require__(/*! ./Images/Ranks/challenger.png */ "./src/css/Images/Ranks/challenger.png"));
+var ___CSS_LOADER_URL___1___ = urlEscape(__webpack_require__(/*! ./Images/Ranks/all.png */ "./src/css/Images/Ranks/all.png"));
+var ___CSS_LOADER_URL___2___ = urlEscape(__webpack_require__(/*! ./Images/Ranks/grandmaster.png */ "./src/css/Images/Ranks/grandmaster.png"));
+var ___CSS_LOADER_URL___3___ = urlEscape(__webpack_require__(/*! ./Images/Ranks/master.png */ "./src/css/Images/Ranks/master.png"));
+
+// Module
+exports.push([module.i, "\n/* GENERICS */\n\nh1 {\n  font-family: Roboto, sans-serif;\n  color: #949494;\n  margin: auto;\n  margin-top: 15%;\n  text-align: center;\n  text-shadow: 0px 0px 5px black;\n}\n\ndiv {\n  font-family: Roboto, sans-serif;\n  color: #949494;\n  margin: auto;\n  text-align: center;\n}\n\na {\n  font-family: Roboto, sans-serif;\n  color: #949494;\n  margin: auto;\n  text-align: center;\n}\n\np {\n  display: inline-block;\n  margin-left: 4%;\n}\n\n/* LARGE CONTAINERS AND BACKGROUNDS */\n\n.mainContainer {\n  text-align: center;\n}\n\n.background1 {\n  background-color: #2d2d2d;\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23494949' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");\n  width: 100%;\n  height: 1500px;\n  top:0;\n  position: fixed;\n  z-index: -1;\n}\n\n/* NAV */\n\n.navbar {\n  position: fixed;\n  top:0;\n  background-color: #121212;\n  width: 100%;\n  box-shadow: 0px 0px 5px black;\n}\n\n.navbutton {\n  font-family: Roboto, sans-serif;\n  font-weight: 700;\n  font-feature-settings: \"kern\" off;\n  font-kerning: none;\n  color: #949494;\n  background-color: #121212;\n  display: inline-block;\n  margin-left: 5%;\n  padding: 10px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  margin-bottom: 2px;\n  border: 0;\n  outline: none;\n  cursor: pointer;\n}\n\n.navbutton-active {\n  font-family: Roboto, sans-serif;\n  font-weight: 700;\n  font-feature-settings: \"kern\" off;\n  font-kerning: none;\n  color: #949494;\n  background-color: #121212;\n  display: inline-block;\n  margin-left: 5%;\n  padding: 10px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  margin-bottom: 2px;\n  border: 0;\n  outline: none;\n  cursor: pointer;\n  transition: 0.3s;\n  border-bottom: solid 2px #8f8f8f;\n}\n\n.navbutton:hover {\n  transition: 0.3s;\n  margin-bottom: 0px;\n  border-bottom: solid 2px #8f8f8f;\n}\n\n\n\n/* SEARCH FORMS */\n\n.summoner-search-form {\n  margin: auto;\n  display: block;\n  text-align: justify;\n  padding: 20px;\n  padding-left: 30px;\n  width: 35%;\n  border: 0;\n  border-radius: 3px;\n  box-shadow: 0px 0px 5px black;\n  background-color: rgb(250, 250, 250);\n  color: #2d2d2d;\n  position: relative;\n}\n\n.summoner-search-box {\n  width: 70%;\n  border: 0;\n  color: #2d2d2d;  \n  outline: 0;\n  font-size: 16px;\n  background-color: rgb(250, 250, 250);\n}\n\n.summoner-search-region {\n  font-weight: 700;\n  margin-left: 4%;\n  margin-right: 1%;\n  padding:4px;\n  width: 29px;\n  border-left: solid 1px black;\n  border-top: 0;\n  border-bottom: 0;\n  border-right: solid 1px black;\n  font-family: Roboto, sans-serif;\n  background-color: rgb(250, 250, 250);\n  color: #2d2d2d;\n  text-align: center;\n  font-size: 75%;\n  outline: 0;\n  display: inline-block;\n}\n\n.summoner-search-submit {\n  font-weight: 700;\n  font-family: Roboto, sans-serif;\n  color: #2d2d2d;\n  font-size: 100%;\n  outline: 0;\n  border: 0;\n  background-color: rgb(250, 250, 250);\n  display: inline-block;\n  cursor: pointer;\n  padding: 0;\n  position: absolute;\n  right: 5%;\n}\n\n.tft-insights-logo-1 {\n  width: 250px;\n  height: auto;\n  display: block;\n  margin: auto;\n  margin-top: 5%;\n  margin-bottom: 3%;\n}\n\n/* FOOTER */\n\nfooter {\n  position: fixed;\n  margin: auto;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  font-size: 65%;\n  text-align: center;\n  width: 100%;\n  background-color: #121212;\n  box-shadow: 0px 0px 5px black;\n}\n\n.footer-links, .disclaimer {\n  margin-top: 0.5%;\n  margin-bottom: 1%;\n  text-align: center;\n  width: 82%;\n}\n\n::placeholder {\n  color:#2d2d2d;\n}\n\nselect {\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  text-indent: 1px;\n  text-overflow: '';\n}\n\n/* ANALYSIS SELECTION TABLE */\n\n.selection-table {\n  margin: auto;\n  margin-top: 6%;\n  border: solid 2px grey;\n  width: 90%;\n  background-color: rgba(0, 0, 0, 0.623);\n  color: rgb(226, 226, 226);\n}\n\n.selection-table-header-head {\n  font-family: Roboto, sans-serif;\n  font-weight: 700;\n  font-size: .8rem;\n  padding: 10px;\n  text-shadow: 0px 0px 5px rgb(0, 0, 0);\n}\n\n.selection-table-body-cell {\n  text-align: left;\n}\n\n.selection-table-body-row {\n  border-top: solid 2px grey;\n}\n\n.selection-button {\n  position: absolute;\n  opacity: 0;\n  width: 0;\n  height: 0;\n  cursor: pointer;\n}\n\n\n.selection-button:checked + .rank-div {\n  transition: 0.5s;\n  box-shadow: 0px 0px 10px rgb(255, 145, 0);\n}\n\n.selection-button-label div {\n  background-position: center;\n  background-size: 140%;\n  margin: auto;\n  margin-top: 5%;\n  margin-bottom: 5%;\n  width: 60px;\n  height: 60px;\n  object-fit: cover;\n  border-radius: 100%;\n  cursor: pointer;\n}\n\n.selection-time-button {\n  margin: auto;\n  margin-top: 5%;\n  margin-bottom: 5%;\n  width: 18%;\n  padding: 10px;\n  border: solid 2px grey;\n  background-color: rgba(0, 0, 0, 0.459);\n  cursor: pointer;\n}\n\n.selection-button:checked + div {\n  transition: 0.5s;\n  box-shadow: 0px 0px 10px rgb(255, 145, 0);\n}\n\n.selection-challenger-image {\n  background-image: url(" + ___CSS_LOADER_URL___0___ + ");\n}\n\n.selection-all-image {\n  background-image: url(" + ___CSS_LOADER_URL___1___ + ");\n}\n\n.selection-grandmaster-image {\n  background-image: url(" + ___CSS_LOADER_URL___2___ + ");\n}\n\n.selection-master-image {\n  background-image: url(" + ___CSS_LOADER_URL___3___ + ");\n}\n\n.selection-table-body-selections {\n  position: relative;\n}\n\n/* RADIAL TRAIT MENU */\n\n.main {\n  margin-left: 5%;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  display: inline-block;\n}\n\n.container {\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n}\n\n.main {\n  background-color: rgb(165, 165, 165);\n  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);\n  cursor: pointer;\n  z-index: 50;\n}\n\n.main:active {\n  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35), inset 1px 2px 2px rgba(0, 0, 0, 0.35);\n  background-color: #ffffff;\n}\n\n.container { z-index: 60; }\n\n.plate {\n  margin-left: 5px;\n  margin-top: 4px;\n  position: absolute;\n  width: 40px;\n  height: 40px;\n  opacity: 0;\n  border-radius: 50%;\n  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);\n  transition: all 0.4s ease-in;\n  background-color: black;\n}\n\n#check:checked ~ .main + .container .plate { opacity: 1; }\n\n#check:checked ~ .main + .container .plate:nth-of-type(1) { top: -250%; }\n\n#check:checked ~ .main + .container .plate:nth-of-type(2) {\n  top: -200%;\n  right: -200%;\n}\n\n#check:checked ~ .main + .container .plate:nth-of-type(3) { right: -250%; }\n\n#check:checked ~ .main + .container .plate:nth-of-type(4) {\n  right: -200%;\n  bottom: -200%;\n}\n\n#check:checked ~ .main + .container .plate:nth-of-type(5) { bottom: -250%; }\n\n#check:checked ~ .main + .container .plate:nth-of-type(6) {\n  bottom: -200%;\n  left: -200%;\n}\n\n#check:checked ~ .main + .container .plate:nth-of-type(7) { left: -250%; }\n\n#check:checked ~ .main + .container .plate:nth-of-type(8) {\n  top: -200%;\n  left: -200%;\n}\n\n#check:checked ~ .main + .container .plate:nth-of-type(9) {\n  top: -450%;\n}\n#check:checked ~ .main + .container .plate:nth-of-type(10) {\n  left: -450%;\n}\n\n#check:checked ~ .main + .container .plate:nth-of-type(11) {\n  top: 450%;\n}\n\n#check:checked ~ .main + .container .plate:nth-of-type(12) {\n  left: 235%;\n}\n\n\n/* MEDIA QUERIES */\n@media screen and (max-width: 500px) {\n  .summoner-search-form {\n    width: 70%;\n  }\n  .navbutton, .navbutton-active, .navbutton:hover{\n    font-size: 0.5rem;\n  }\n  .tft-insights-logo-1 {\n    width: 50%;\n    margin-top: 20%;\n  }\n}", ""]);
+
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/css/index.css ***!
+  \******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "body {\n  margin: 0;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./src/components/About.js":
+/*!*********************************!*\
+  !*** ./src/components/About.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./src/components/NavBar.js");
+/* harmony import */ var _css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/Images/logo2.png */ "./src/css/Images/logo2.png");
+/* harmony import */ var _css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\About.js";
+
+
+
+
+
+
+class About extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "mainContainer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      history: this.props.history,
+      activeIndex: 0,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "background1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      alt: "TFT.INSIGHTS logo",
+      src: _css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+      className: "tft-insights-logo-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "footer-links",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+      to: "/about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "About INSIGHTS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "disclaimer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }, "\xA9 2019 TFT.INSIGHTS TFT.INSIGHTS isn\u2019t endorsed by Riot Games and doesn\u2019t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends \xA9 Riot Games, Inc.")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
+
+/***/ }),
+
+/***/ "./src/components/Analytics.js":
+/*!*************************************!*\
+  !*** ./src/components/Analytics.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./src/components/NavBar.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _SelectionTable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./SelectionTable */ "./src/components/SelectionTable.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\Analytics.js";
+
+
+
+
+
+
+class Analytics extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(...args) {
+    super(...args);
+    this.state = {
+      selectedTime: "30 days",
+      selectedRank: "All",
+      selectedTraits: {}
+    };
+
+    this.setOptions = newOptions => {
+      this.setState(newOptions);
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "mainContainer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      history: this.props.history,
+      activeIndex: 2,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "background1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SelectionTable__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      setOptions: this.setOptions,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "footer-links",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      to: "/about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, "About INSIGHTS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "disclaimer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, "\xA9 2019 TFT.INSIGHTS TFT.INSIGHTS isn\u2019t endorsed by Riot Games and doesn\u2019t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends \xA9 Riot Games, Inc.")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Analytics);
+
+/***/ }),
+
+/***/ "./src/components/Builds.js":
+/*!**********************************!*\
+  !*** ./src/components/Builds.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./src/components/NavBar.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\Builds.js";
+
+
+
+
+
+class Builds extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "mainContainer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      history: this.props.history,
+      activeIndex: 3,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "background1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "footer-links",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      to: "/about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, "About INSIGHTS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "disclaimer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "\xA9 2019 TFT.INSIGHTS TFT.INSIGHTS isn\u2019t endorsed by Riot Games and doesn\u2019t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends \xA9 Riot Games, Inc.")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Builds);
+
+/***/ }),
+
+/***/ "./src/components/Home.js":
+/*!********************************!*\
+  !*** ./src/components/Home.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./src/components/NavBar.js");
+/* harmony import */ var _css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/Images/logo2.png */ "./src/css/Images/logo2.png");
+/* harmony import */ var _css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\Home.js";
+
+
+
+
+
+
+class Home extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(...args) {
+    super(...args);
+    this.nameRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    this.regionRef = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+
+    this.searchSummoner = event => {
+      event.preventDefault();
+      this.props.history.push("/profile/".concat(this.regionRef.current.value, "/").concat(this.nameRef.current.value));
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "mainContainer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      history: this.props.history,
+      activeIndex: 1,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "background1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      alt: "TFT.INSIGHTS logo",
+      src: _css_Images_logo2_png__WEBPACK_IMPORTED_MODULE_3___default.a,
+      className: "tft-insights-logo-1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      className: "summoner-search-form",
+      onSubmit: this.searchSummoner,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      className: "summoner-search-box",
+      placeholder: "Summoner Name",
+      ref: this.nameRef,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+      className: "summoner-search-region",
+      ref: this.regionRef,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "NA",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "NA"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "EU",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, "EU"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      value: "KR",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, "KR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      type: "submit",
+      className: "summoner-search-submit",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, "\xBB")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "footer-links",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Link"], {
+      to: "/about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, "About INSIGHTS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "disclaimer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, "\xA9 2019 TFT.INSIGHTS TFT.INSIGHTS isn\u2019t endorsed by Riot Games and doesn\u2019t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends \xA9 Riot Games, Inc.")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./src/components/NavBar.js":
+/*!**********************************!*\
+  !*** ./src/components/NavBar.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavButton */ "./src/components/NavButton.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\NavBar.js";
+
+
+
+
+class NavBar extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(...args) {
+    super(...args);
+
+    this.handleClick = (index, destination) => {
+      this.setState({
+        activeIndex: index
+      });
+      this.props.history.push(destination);
+    };
+
+    this.state = {
+      activeIndex: this.props.activeIndex
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "navbar",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      content: "HOME",
+      index: 1,
+      handleClick: this.handleClick,
+      isActive: this.state.activeIndex === 1,
+      destination: "/home",
+      history: this.props.history,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      content: "ANALYTICS",
+      index: 2,
+      handleClick: this.handleClick,
+      isActive: this.state.activeIndex === 2,
+      destination: "/analytics",
+      history: this.props.history,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      content: "RECENT BUILDS",
+      index: 3,
+      handleClick: this.handleClick,
+      isActive: this.state.activeIndex === 3,
+      destination: "/builds",
+      history: this.props.history,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      content: "PROFILE",
+      index: 4,
+      handleClick: this.handleClick,
+      isActive: this.state.activeIndex === 4,
+      destination: "/profile",
+      history: this.props.history,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NavBar);
+
+/***/ }),
+
+/***/ "./src/components/NavButton.js":
+/*!*************************************!*\
+  !*** ./src/components/NavButton.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\NavButton.js";
+
+
+
+class NavButton extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    let className = "navbutton";
+
+    if (this.props.isActive) {
+      className = "navbutton-active";
+    } else {
+      className = "navbutton";
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: className,
+      onClick: () => this.props.handleClick(this.props.index, this.props.destination),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, this.props.content);
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NavButton);
+
+/***/ }),
+
+/***/ "./src/components/NotFound.js":
+/*!************************************!*\
+  !*** ./src/components/NotFound.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./src/components/NavBar.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\NotFound.js";
+
+
+
+
+
+class NotFound extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "mainContainer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      history: this.props.history,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "background1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, "Sorry, this page doesn't exist."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "footer-links",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      to: "/about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, "About INSIGHTS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "disclaimer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, "\xA9 2019 TFT.INSIGHTS TFT.INSIGHTS isn\u2019t endorsed by Riot Games and doesn\u2019t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends \xA9 Riot Games, Inc.")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NotFound);
+
+/***/ }),
+
+/***/ "./src/components/Profile.js":
+/*!***********************************!*\
+  !*** ./src/components/Profile.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./src/components/NavBar.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\Profile.js";
+
+
+
+
+
+class Profile extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "mainContainer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      history: this.props.history,
+      activeIndex: 4,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "background1",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "footer-links",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Link"], {
+      to: "/about",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, "About INSIGHTS")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "disclaimer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, "\xA9 2019 TFT.INSIGHTS TFT.INSIGHTS isn\u2019t endorsed by Riot Games and doesn\u2019t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends \xA9 Riot Games, Inc.")));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Profile);
+
+/***/ }),
+
+/***/ "./src/components/RankForm.js":
+/*!************************************!*\
+  !*** ./src/components/RankForm.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\RankForm.js";
+
+
+
+class RankForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      className: "selection-table-body-selections",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-button-head",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "selection-button-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      name: "All",
+      type: "radio",
+      className: "selection-button",
+      checked: this.props.selectedRank === "All",
+      onChange: this.props.handleRankChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-all-image rank-div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-button-container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "selection-button-label rank-div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      name: "Challenger",
+      type: "radio",
+      className: "selection-button",
+      checked: this.props.selectedRank === "Challenger",
+      onChange: this.props.handleRankChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-challenger-image rank-div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-button-container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "selection-button-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      name: "GrandMaster",
+      type: "radio",
+      className: "selection-button",
+      checked: this.props.selectedRank === "GrandMaster",
+      onChange: this.props.handleRankChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-grandmaster-image rank-div",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-button-container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "selection-button-label",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      name: "Master",
+      type: "radio",
+      className: "selection-button",
+      checked: this.props.selectedRank === "Master",
+      onChange: this.props.handleRankChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-master-image",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (RankForm);
+
+/***/ }),
+
+/***/ "./src/components/Router.js":
+/*!**********************************!*\
+  !*** ./src/components/Router.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _NotFound__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NotFound */ "./src/components/NotFound.js");
+/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Home */ "./src/components/Home.js");
+/* harmony import */ var _Profile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Profile */ "./src/components/Profile.js");
+/* harmony import */ var _Analytics__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Analytics */ "./src/components/Analytics.js");
+/* harmony import */ var _Builds__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Builds */ "./src/components/Builds.js");
+/* harmony import */ var _About__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./About */ "./src/components/About.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\Router.js";
+
+
+
+
+
+
+
+
+
+const Router = () => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  exact: true,
+  path: "/",
+  component: _Home__WEBPACK_IMPORTED_MODULE_3__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  exact: true,
+  path: "/home",
+  component: _Home__WEBPACK_IMPORTED_MODULE_3__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 14
+  },
+  __self: undefined
+}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  exact: true,
+  path: "/profile/:region/:profileId",
+  component: _Profile__WEBPACK_IMPORTED_MODULE_4__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 15
+  },
+  __self: undefined
+}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  exact: true,
+  path: "/analytics",
+  component: _Analytics__WEBPACK_IMPORTED_MODULE_5__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 16
+  },
+  __self: undefined
+}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  exact: true,
+  path: "/builds",
+  component: _Builds__WEBPACK_IMPORTED_MODULE_6__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 17
+  },
+  __self: undefined
+}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  exact: true,
+  path: "/about",
+  component: _About__WEBPACK_IMPORTED_MODULE_7__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 18
+  },
+  __self: undefined
+}), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  component: _NotFound__WEBPACK_IMPORTED_MODULE_2__["default"],
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+})));
+
+/* harmony default export */ __webpack_exports__["default"] = (Router);
+
+/***/ }),
+
+/***/ "./src/components/SelectionTable.js":
+/*!******************************************!*\
+  !*** ./src/components/SelectionTable.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_Perihelion_Desktop_vscodeJS_TFTBuilds_tftbuilds_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _TimeForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TimeForm */ "./src/components/TimeForm.js");
+/* harmony import */ var _RankForm__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./RankForm */ "./src/components/RankForm.js");
+/* harmony import */ var _TraitForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./TraitForm */ "./src/components/TraitForm.js");
+
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\SelectionTable.js";
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(C_Users_Perihelion_Desktop_vscodeJS_TFTBuilds_tftbuilds_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+
+
+
+
+class SelectionTable extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+  constructor(...args) {
+    super(...args);
+    this.state = {
+      selectedTime: "30days",
+      selectedRank: "All",
+      selectedTraits: {
+        slot1: {
+          trait: "",
+          tier: 0
+        }
+      }
+    };
+
+    this.handleTimeChange = event => {
+      event.persist();
+
+      let newState = _objectSpread({}, this.state);
+
+      newState.selectedTime = event.target.name;
+      this.setState(newState);
+      this.props.setOptions(newState);
+    };
+
+    this.handleRankChange = event => {
+      event.persist();
+
+      let newState = _objectSpread({}, this.state);
+
+      newState.selectedRank = event.target.name;
+      this.setState(newState);
+      this.props.setOptions(newState);
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("table", {
+      className: "selection-table",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("thead", {
+      className: "selection-table-header",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", {
+      className: "selection-table-header-row",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+      className: "selection-table-header-head",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, "TRAITS"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+      className: "selection-table-header-head",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "TIME"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("th", {
+      className: "selection-table-header-head",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, "RANK"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tbody", {
+      className: "selection-table-body",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("tr", {
+      className: "selection-table-body-row",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", {
+      className: "selection-table-body-cell",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_TraitForm__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      selectedTraits: this.state.selectedTraits,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", {
+      className: "selection-table-body-cell",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_TimeForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      handleTimeChange: this.handleTimeChange,
+      selectedTime: this.state.selectedTime,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("td", {
+      className: "selection-table-body-cell",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_RankForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      handleRankChange: this.handleRankChange,
+      selectedRank: this.state.selectedRank,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52
+      },
+      __self: this
+    })))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SelectionTable);
+
+/***/ }),
+
+/***/ "./src/components/TimeForm.js":
+/*!************************************!*\
+  !*** ./src/components/TimeForm.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\TimeForm.js";
+
+
+
+class TimeForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      className: "selection-table-body-selections",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "selection-button-label-time",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-button-head",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      name: "30days",
+      type: "radio",
+      className: "selection-button",
+      checked: this.props.selectedTime === "30days",
+      onChange: this.props.handleTimeChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-time-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, "30 days"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "selection-button-label-time",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-button-container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      name: "7days",
+      type: "radio",
+      className: "selection-button",
+      checked: this.props.selectedTime === "7days",
+      onChange: this.props.handleTimeChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-time-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29
+      },
+      __self: this
+    }, "7 Days"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "selection-button-label-time",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-button-container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      name: "1day",
+      type: "radio",
+      className: "selection-button",
+      checked: this.props.selectedTime === "1day",
+      onChange: this.props.handleTimeChange,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "selection-time-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, "24 Hours"))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (TimeForm);
+
+/***/ }),
+
+/***/ "./src/components/TraitForm.js":
+/*!*************************************!*\
+  !*** ./src/components/TraitForm.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/App.css */ "./src/css/App.css");
+/* harmony import */ var _css_App_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_css_App_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\components\\TraitForm.js";
+
+
+
+class TraitForm extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
+  constructor(...args) {
+    super(...args);
+    this.state = {
+      slot1: {
+        activeTrait: false,
+        activeTier: false
+      }
+    };
+  }
+
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      className: "selection-table-body-selections",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      id: "check",
+      type: "checkbox",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+      className: "main",
+      htmlFor: "check",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "title",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fa fa-bars ",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-tumblr selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-pinterest selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-instagram selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-linkedin selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-github selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-google-plus selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 49
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-facebook selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-twitter selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-twitter selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-twitter selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 73
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 78
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-twitter selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 79
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "plate",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 84
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "radio",
+      className: "fa fa-twitter selection-button",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 85
+      },
+      __self: this
+    })))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (TraitForm);
+
+/***/ }),
+
+/***/ "./src/css/App.css":
+/*!*************************!*\
+  !*** ./src/css/App.css ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/App.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/App.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./App.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/App.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/css/Images/Ranks/all.png":
+/*!**************************************!*\
+  !*** ./src/css/Images/Ranks/all.png ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/all.e1664a8b.png";
+
+/***/ }),
+
+/***/ "./src/css/Images/Ranks/challenger.png":
+/*!*********************************************!*\
+  !*** ./src/css/Images/Ranks/challenger.png ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/challenger.6ea954fe.png";
+
+/***/ }),
+
+/***/ "./src/css/Images/Ranks/grandmaster.png":
+/*!**********************************************!*\
+  !*** ./src/css/Images/Ranks/grandmaster.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/grandmaster.3143fb83.png";
+
+/***/ }),
+
+/***/ "./src/css/Images/Ranks/master.png":
+/*!*****************************************!*\
+  !*** ./src/css/Images/Ranks/master.png ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/master.41652ebf.png";
+
+/***/ }),
+
+/***/ "./src/css/Images/logo2.png":
+/*!**********************************!*\
+  !*** ./src/css/Images/logo2.png ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/logo2.4e5928ce.png";
+
+/***/ }),
+
+/***/ "./src/css/index.css":
+/*!***************************!*\
+  !*** ./src/css/index.css ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./index.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/css/index.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/index.css */ "./src/css/index.css");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_index_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_Router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Router */ "./src/components/Router.js");
+var _jsxFileName = "C:\\Users\\Perihelion\\Desktop\\vscodeJS\\TFTBuilds\\tftbuilds\\src\\index.js";
+
+
+
+
+Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Router__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}), document.querySelector("#root"));
+
+/***/ }),
+
+/***/ 0:
+/*!**********************************************************************************!*\
+  !*** multi ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\Perihelion\Desktop\vscodeJS\TFTBuilds\tftbuilds\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\Perihelion\Desktop\vscodeJS\TFTBuilds\tftbuilds\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[0,"runtime-main",1]]]);
+//# sourceMappingURL=main.chunk.js.map

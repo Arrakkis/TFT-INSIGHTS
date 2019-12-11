@@ -1,0 +1,76 @@
+.elements-container-active .plate {cursor: pointer; z-index: 10; display: block; opacity: 1; transition: 0.25s; 
+}
+
+.elements-container-active .plate:nth-of-type(1) {
+  top: -230%;
+  background-image: url(./Images/Traits/cloud.png);
+}
+
+.elements-container-active .plate:nth-of-type(2) {
+  top: -285%;
+  right: -100%;
+  background-image: url(./Images/Traits/crystal.png);
+}
+
+.elements-container-active .plate:nth-of-type(3) {
+  right: -130%;
+  top: -271%;
+  background-image: url(./Images/Traits/desert.png);
+}
+
+.elements-container-active .plate:nth-of-type(4) {
+  right: -100%;
+  bottom: 260%;
+  background-image: url(./Images/Traits/electric.png);
+}
+
+.elements-container-active .plate:nth-of-type(5) {
+  top: -320%;
+  background-image: url(./Images/Traits/glacial.png);
+}
+
+.elements-container-active .plate:nth-of-type(6) {
+  bottom: 435%;
+  left: -100%;
+  background-image: url(./Images/Traits/inferno.png);
+}
+
+.elements-container-active .plate:nth-of-type(7) { 
+  left: -130%;
+  top: -620%;
+  background-image: url(./Images/Traits/light.png);
+}
+
+.elements-container-active .plate:nth-of-type(8) {
+  top: -810%;
+  left: -100%;
+  background-image: url(./Images/Traits/mountain.png);
+}
+
+.elements-container-active .plate:nth-of-type(9) {
+  top: -560%;
+  background-image: url(./Images/Traits/ocean.png);
+}
+.elements-container-active .plate:nth-of-type(10) {
+  left: -240%;
+  top: -883%;
+  background-image: url(./Images/Traits/poison.png);
+}
+
+.elements-container-active .plate:nth-of-type(11) {
+  top: -1177%;
+  left: -85%;
+  background-image: url(./Images/Traits/shadow.png);
+}
+
+.elements-container-active .plate:nth-of-type(12) {
+  left: 240%;
+  top: -1062%;
+  background-image: url(./Images/Traits/steel.png);
+}
+
+.elements-container-active .plate:nth-of-type(13) {
+    left: 86%;
+    top: -1355%;
+    background-image: url(./Images/Traits/woodland.png);
+  }

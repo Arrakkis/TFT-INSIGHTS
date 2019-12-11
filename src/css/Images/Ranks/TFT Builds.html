@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/analytics -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Insights and analysis">
+    <link href="./TFT Builds_files/css" rel="stylesheet">
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <title>TFT Builds</title>
+  <style>body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style><style>
+/* GENERICS */
+
+h1 {
+  font-family: Roboto, sans-serif;
+  color: #949494;
+  margin: auto;
+  margin-top: 15%;
+  text-align: center;
+  text-shadow: 0px 0px 5px black;
+}
+
+div {
+  font-family: Roboto, sans-serif;
+  color: #949494;
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  font-family: Roboto, sans-serif;
+  color: #949494;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+  margin-left: 4%;
+}
+
+/* LARGE CONTAINERS AND BACKGROUNDS */
+
+.mainContainer {
+  text-align: center;
+}
+
+.background1 {
+  background-color: #2d2d2d;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23494949' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  width: 100%;
+  height: 1500px;
+  top:0;
+  position: fixed;
+  z-index: -1;
+}
+
+/* NAV */
+
+.navbar {
+  position: fixed;
+  top:0;
+  background-color: #121212;
+  width: 100%;
+  box-shadow: 0px 0px 5px black;
+}
+
+.navbutton {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-feature-settings: "kern" off;
+  font-kerning: none;
+  color: #949494;
+  background-color: #121212;
+  display: inline-block;
+  margin-left: 5%;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 2px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.navbutton-active {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-feature-settings: "kern" off;
+  font-kerning: none;
+  color: #949494;
+  background-color: #121212;
+  display: inline-block;
+  margin-left: 5%;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 2px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-bottom: solid 2px #8f8f8f;
+}
+
+.navbutton:hover {
+  transition: 0.3s;
+  margin-bottom: 0px;
+  border-bottom: solid 2px #8f8f8f;
+}
+
+
+
+/* SEARCH FORMS */
+
+.summoner-search-form {
+  margin: auto;
+  display: block;
+  text-align: justify;
+  padding: 20px;
+  padding-left: 30px;
+  width: 35%;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px black;
+  background-color: rgb(250, 250, 250);
+  color: #2d2d2d;
+  position: relative;
+}
+
+.summoner-search-box {
+  width: 70%;
+  border: 0;
+  color: #2d2d2d;  
+  outline: 0;
+  font-size: 16px;
+  background-color: rgb(250, 250, 250);
+}
+
+.summoner-search-region {
+  font-weight: 700;
+  margin-left: 4%;
+  margin-right: 1%;
+  padding:4px;
+  width: 29px;
+  border-left: solid 1px black;
+  border-top: 0;
+  border-bottom: 0;
+  border-right: solid 1px black;
+  font-family: Roboto, sans-serif;
+  background-color: rgb(250, 250, 250);
+  color: #2d2d2d;
+  text-align: center;
+  font-size: 75%;
+  outline: 0;
+  display: inline-block;
+}
+
+.summoner-search-submit {
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  color: #2d2d2d;
+  font-size: 100%;
+  outline: 0;
+  border: 0;
+  background-color: rgb(250, 250, 250);
+  display: inline-block;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 5%;
+}
+
+.tft-insights-logo-1 {
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+
+/* FOOTER */
+
+footer {
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 65%;
+  text-align: center;
+  width: 100%;
+  background-color: #121212;
+  box-shadow: 0px 0px 5px black;
+}
+
+.footer-links, .disclaimer {
+  margin-top: 0.5%;
+  margin-bottom: 1%;
+  text-align: center;
+  width: 82%;
+}
+
+::placeholder {
+  color:#2d2d2d;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+/* ANALYSIS SELECTION TABLE */
+
+.selection-table {
+  margin: auto;
+  margin-top: 6%;
+  border: solid 2px grey;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.623);
+  color: rgb(226, 226, 226);
+}
+
+.selection-table-header-head {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: .8rem;
+  padding: 10px;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.selection-table-body-cell {
+  text-align: left;
+}
+
+.selection-table-body-row {
+  border-top: solid 2px grey;
+}
+
+.selection-button {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+
+.selection-button:checked + .rank-div {
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px rgb(255, 145, 0);
+}
+
+.selection-button-label div {
+  background-position: center;
+  background-size: 140%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.selection-time-button {
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 18%;
+  padding: 10px;
+  border: solid 2px grey;
+  background-color: rgba(0, 0, 0, 0.459);
+  cursor: pointer;
+}
+
+.selection-button:checked + div {
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px rgb(255, 145, 0);
+}
+
+.selection-challenger-image {
+  background-image: url(/static/media/challenger.6ea954fe.png);
+}
+
+.selection-all-image {
+  background-image: url(/static/media/all.e1664a8b.png);
+}
+
+.selection-grandmaster-image {
+  background-image: url(/static/media/grandmaster.3143fb83.png);
+}
+
+.selection-master-image {
+  background-image: url(/static/media/master.41652ebf.png);
+}
+
+.selection-table-body-selections {
+  position: relative;
+}
+
+/* RADIAL TRAIT MENU */
+
+#check {display: none;}
+
+.main {
+  margin-left: 5%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.main {
+  background-color: rgb(165, 165, 165);
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  z-index: 50;
+}
+
+.main:active {
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35), inset 1px 2px 2px rgba(0, 0, 0, 0.35);
+  background-color: #ffffff;
+}
+
+.container { z-index: 60; }
+
+.plate {
+  margin-left: 5px;
+  margin-top: 4px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  border-radius: 50%;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease-in;
+  background-color: black;
+}
+
+#check:checked ~ .main  .plate { opacity: 1; }
+
+#check:checked ~ .main  .plate:nth-of-type(1) { top: -50px; }
+
+#check:checked ~ .main  .plate:nth-of-type(2) {
+  top: -10%;
+  right: -10%;
+}
+
+#check:checked ~ .main  .plate:nth-of-type(3) { right: -110%; }
+
+#check:checked ~ .main  .plate:nth-of-type(4) {
+  right: -10%;
+  bottom: -10%;
+}
+
+#check:checked ~ .main  .plate:nth-of-type(5) { bottom: -110%; }
+
+#check:checked ~ .main  .plate:nth-of-type(6) {
+  bottom: -10%;
+  left: -10%;
+}
+
+#check:checked ~ .main  .plate:nth-of-type(7) { left: -110%; }
+
+#check:checked ~ .main  .plate:nth-of-type(8) {
+  top: -10%;
+  left: -10%;
+}
+
+#check:checked ~ .main  .plate:nth-of-type(9) {
+  top: -20%;
+}
+#check:checked ~ .main  .plate:nth-of-type(10) {
+  left: -20%;
+}
+
+#check:checked ~ .main  .plate:nth-of-type(11) {
+  top: 20%;
+}
+
+#check:checked ~ .main  .plate:nth-of-type(12) {
+  left: 20%;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 500px) {
+  .summoner-search-form {
+    width: 70%;
+  }
+  .navbutton, .navbutton-active, .navbutton:hover{
+    font-size: 0.5rem;
+  }
+  .tft-insights-logo-1 {
+    width: 50%;
+    margin-top: 20%;
+  }
+}</style><script charset="utf-8" src="./TFT Builds_files/main.4fe7234be2d76de3884f.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.287153e8b5b39d348196.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.c440c94a310da0c51cbd.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.d631f56d4469fce77037.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.3308885b377a3868d4bc.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.0295614f20bf4a71c3a7.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.a44e8c08f65cf5184de1.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.ca454a46c8fef59bb0df.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.027abcdfcf4d2a4c097b.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.aaf99752d8701326d2c6.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.d2273eba4aa624d27578.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.6064bbd170863558c86c.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.3df0e79faea2180f7954.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.a2e16144585acfe3f4ef.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.ede1c354f61c031d33f4.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.4175b78555f39e2ab9e6.hot-update.js.download"></script><script charset="utf-8" src="./TFT Builds_files/main.46ef8d266c9dd3918621.hot-update.js.download"></script></head>
+  <body data-__gyazo-extension-added-paste-support="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><span class="mainContainer"><div class="navbar"><button class="navbutton">HOME</button><button class="navbutton-active">ANALYTICS</button><button class="navbutton">RECENT BUILDS</button><button class="navbutton">PROFILE</button></div><div class="background1"></div><table class="selection-table"><thead class="selection-table-header"><tr class="selection-table-header-row"><th class="selection-table-header-head">TRAITS</th><th class="selection-table-header-head">TIME</th><th class="selection-table-header-head">RANK</th></tr></thead><tbody class="selection-table-body"><tr class="selection-table-body-row"><td class="selection-table-body-cell"><form class="selection-table-body-selections"><input id="check" type="checkbox"><label class="main" for="check"><div class="title"><i class="fa fa-bars "></i></div><div class="container"><div class="plate"><input type="radio" class="fa fa-tumblr selection-button"></div><div class="plate"><input type="radio" class="fa fa-pinterest selection-button"></div><div class="plate"><input type="radio" class="fa fa-instagram selection-button"></div><div class="plate"><input type="radio" class="fa fa-linkedin selection-button"></div><div class="plate"><input type="radio" class="fa fa-github selection-button"></div><div class="plate"><input type="radio" class="fa fa-google-plus selection-button"></div><div class="plate"><input type="radio" class="fa fa-facebook selection-button"></div><div class="plate"><input type="radio" class="fa fa-twitter selection-button"></div><div class="plate"><input type="radio" class="fa fa-twitter selection-button"></div><div class="plate"><input type="radio" class="fa fa-twitter selection-button"></div><div class="plate"><input type="radio" class="fa fa-twitter selection-button"></div><div class="plate"><input type="radio" class="fa fa-twitter selection-button"></div></div></label></form></td><td class="selection-table-body-cell"><form class="selection-table-body-selections"><label class="selection-button-label-time"><div class="selection-button-head"><input name="30days" type="radio" class="selection-button" checked=""><div class="selection-time-button">30 days</div></div></label><label class="selection-button-label-time"><div class="selection-button-container"><input name="7days" type="radio" class="selection-button"><div class="selection-time-button">7 Days</div></div></label><label class="selection-button-label-time"><div class="selection-button-container"><input name="1day" type="radio" class="selection-button"><div class="selection-time-button">24 Hours</div></div></label></form></td><td class="selection-table-body-cell"><form class="selection-table-body-selections"><div class="selection-button-head"><label class="selection-button-label"><input name="All" type="radio" class="selection-button" checked=""><div class="selection-all-image rank-div"></div></label></div><div class="selection-button-container"><label class="selection-button-label rank-div"><input name="Challenger" type="radio" class="selection-button"><div class="selection-challenger-image rank-div"></div></label></div><div class="selection-button-container"><label class="selection-button-label"><input name="GrandMaster" type="radio" class="selection-button"><div class="selection-grandmaster-image rank-div"></div></label></div><div class="selection-button-container"><label class="selection-button-label"><input name="Master" type="radio" class="selection-button"><div class="selection-master-image"></div></label></div></form></td></tr></tbody></table><footer><div class="footer-links"><a href="http://localhost:3000/about">About INSIGHTS</a></div><div class="disclaimer">© 2019 TFT.INSIGHTS TFT.INSIGHTS isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</div></footer></span></div>
+  <script src="./TFT Builds_files/bundle.js.download"></script><script src="./TFT Builds_files/1.chunk.js.download"></script><script src="./TFT Builds_files/main.chunk.js.download"></script><script src="./TFT Builds_files/main.c688ee3e75fce1d517c3.hot-update.js.download"></script>
+
+</body></html>

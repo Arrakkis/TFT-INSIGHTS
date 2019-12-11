@@ -1,3 +1,49 @@
+@import "./ClassesPlates.css";
+@import "./ElementsPlates.css";
+
+/* GENERICS */
+
+h1 {
+  font-family: Roboto, sans-serif;
+  color: #949494;
+  margin: auto;
+  margin-top: 15%;
+  text-align: center;
+  text-shadow: 0px 0px 5px black;
+}
+
+div {
+  font-family: Roboto, sans-serif;
+  color: #949494;
+  margin: auto;
+  text-align: center;
+}
+
+a {
+  font-family: Roboto, sans-serif;
+  color: #949494;
+  margin: auto;
+  text-align: center;
+}
+
+p {
+  display: inline-block;
+  margin-left: 4%;
+}
+
+td, th {
+  font-family: 'Patua One', cursive;
+}
+
+th {
+  width: 100px
+}
+
+.results-table {
+  width: 100%;
+}
+/* LARGE CONTAINERS AND BACKGROUNDS */
+
 .mainContainer {
   text-align: center;
 }
@@ -12,12 +58,15 @@
   z-index: -1;
 }
 
+/* NAV */
+
 .navbar {
   position: fixed;
   top:0;
   background-color: #121212;
   width: 100%;
   box-shadow: 0px 0px 5px black;
+  z-index: 10;
 }
 
 .navbutton {
@@ -62,36 +111,15 @@
   border-bottom: solid 2px #8f8f8f;
 }
 
-h1 {
-  font-family: Roboto, sans-serif;
-  color: #949494;
-  margin: auto;
-  margin-top: 15%;
-  text-align: center;
-  text-shadow: 0px 0px 5px black;
-}
-
-div {
-  font-family: Roboto, sans-serif;
-  color: #949494;
-  margin: auto;
-  text-align: center;
-}
-
-a {
-  font-family: Roboto, sans-serif;
-  color: #949494;
-  margin: auto;
-  text-align: center;
-}
 
 
+/* SEARCH FORMS */
 
 .summoner-search-form {
   margin: auto;
   display: block;
   text-align: justify;
-  padding: 15px;
+  padding: 20px;
   padding-left: 30px;
   width: 35%;
   border: 0;
@@ -107,6 +135,7 @@ a {
   border: 0;
   color: #2d2d2d;  
   outline: 0;
+  font-size: 16px;
   background-color: rgb(250, 250, 250);
 }
 
@@ -153,6 +182,8 @@ a {
   margin-bottom: 3%;
 }
 
+/* FOOTER */
+
 footer {
   position: fixed;
   margin: auto;
@@ -164,6 +195,7 @@ footer {
   width: 100%;
   background-color: #121212;
   box-shadow: 0px 0px 5px black;
+  z-index: 10;
 }
 
 .footer-links, .disclaimer {
@@ -184,6 +216,448 @@ select {
   text-overflow: '';
 }
 
+/* ANALYSIS SELECTION TABLE */
+
+.selection-table {
+  margin: auto;
+  margin-top: 10%;
+  border-top: solid 2px grey;
+  border-bottom: solid 2px grey;
+  width: 100%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.623);
+  color: rgb(226, 226, 226);
+}
+
+.selection-table-header-head {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: .8rem;
+  padding: 10px;
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.selection-table-body-cell {
+  height: 100px;
+}
+
+.selection-table-body-cell-rank{
+  text-align: left;
+  width: 150px;
+}
+
+.selection-table-body-cell-time{
+  text-align: left;
+  width: 100px;
+}
+
+.selection-table-body-row {
+  border-top: solid 2px grey;
+  height: 200px;
+}
+
+.selection-button {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.selection-button:checked + .rank-div {
+  transition: 0.25s;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.selection-button-label div {
+  background-position: center;
+  background-size: 140%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.selection-time-button {
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  padding: 10px;
+  border: solid 1px grey;
+  background-color: rgba(0, 0, 0, 0.459);
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: 0.25s;
+}
+
+.selection-time-button:hover {
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.selection-button:checked + div {
+  transition: 0.25s;
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.selection-challenger-image {
+  transition: 0.25s;
+  background-image: url(./Images/Ranks/challenger.png);
+}
+
+.selection-all-image {
+  transition: 0.25s;
+  background-image: url(./Images/Ranks/all.png);
+}
+
+.selection-grandmaster-image {
+  transition: 0.25s;
+  background-image: url(./Images/Ranks/grandmaster.png);
+}
+
+.selection-master-image {
+  transition: 0.25s;
+  background-image: url(./Images/Ranks/master.png);
+}
+
+
+.selection-challenger-image:hover {
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.selection-all-image:hover {
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.selection-grandmaster-image:hover {
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.selection-master-image:hover {
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
+
+.selection-table-body-selections {
+  position: relative;
+}
+
+.selection-table-body-selections-traits {
+  display: table;
+  width: 700px;
+  z-index: -10;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.selection-clear-container{
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  width: 10%;
+}
+
+.selection-clear {
+  font-family: 'Patua One', cursive;
+  font-size: .8rem;
+  color: #c7aa6f;
+  background-color: #1e2328;
+  border: solid 2px #c7aa6f;
+  padding: 4px;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.25s;
+  position: absolute;
+  left: 200%;
+  top: 30%;
+}
+
+.selection-clear:hover {
+  box-shadow: 0px 0px 5px #c7aa6f;
+  transition: 0.25s
+}
+
+
+
+.locked {
+  pointer-events: none;
+  filter: grayscale(70%)
+}
+
+/* RADIAL TRAIT MENU */
+
+.elements-checkbox, .classes-checkbox, .tier-checkbox{
+  display: none;
+}
+
+.classes-button {
+  background-image: url(./Images/classesButton.png);
+  width: 66px;
+  height: 33px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.25s;
+  filter: grayscale(70%);
+}
+
+.elements-button {
+  background-image: url(./Images/elementsButton.png);
+  width: 66px;
+  height: 33px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.25s;
+  filter: grayscale(70%);
+}
+
+.elements-button-active {
+  background-image: url(./Images/elementsButton.png);
+  width: 66px;
+  height: 33px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.25s;
+  filter: none;
+}
+
+.classes-button-active {
+  background-image: url(./Images/classesButton.png);
+  width: 66px;
+  height: 33px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 0.25s;
+  filter: none;
+}
+
+.elements-button:hover {
+  transition: 0.25s;
+  filter: none;
+}
+
+.classes-button:hover {
+  transition: 0.25s;
+  filter: none;
+}
+
+.main {
+  margin-left: 20%;
+  display: inline-block;
+  position: relative;
+}
+
+.container, .classes-container, .classes-container-active, .elements-container, .elements-container-active {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 8px;
+  top: 58px;
+}
+
+.radial-background {
+  pointer-events: none;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  top: -117px;
+  left: -116px;
+  z-index: 1;
+}
+
+.radial-background-active {
+  pointer-events: none;
+  border-radius: 50%;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transition: 0.25s;
+  opacity: 1;
+  box-shadow: 0px 0px 5px rgb(255, 166, 0);
+  top: -117px;
+  left: -116px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.radial-background-mask::after {
+  content: '';
+  position: absolute;
+  border-radius:100%;
+  width:66px; height:66px;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0px 0px 0px 2000px rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  top: -17px;
+  right: -17px;
+  width: 100px;
+  height: 100px;
+  background-image: url(./Images/Effects/TraitSpinner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  opacity: 0;
+  transition: 1s;
+}
+
+.spinner-active {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  top: -17px;
+  right: -17px;
+  width: 100px;
+  height: 100px;
+  background-image: url(./Images/Effects/TraitSpinner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  opacity: 1;
+  transition: 1s;
+}
+
+/* TIER RADIAL MENU */
+
+.selection-tier-slot {
+  display: inline-block;
+  background-color: #1e2328;
+  border: solid 2px #c7aa6f;
+  border-radius: 50%;
+  background-size: 100%;
+  width: 66px;
+  height: 66px;
+  position: relative;
+  margin-left: 20%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.selection-tier-item {
+  position: absolute;
+  background-image: none;
+  background-size: 100%;
+  width: 45px;
+  height: 45px;
+  background-position: center;
+  left: 11px;
+  top: 11px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.tier-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 8px;
+  top: 58px;
+}
+
+.tier-container-active {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 8px;
+  top: 58px;
+}
+
+.neutral {
+  background-color: #1e2328;
+}
+
+.bronze {
+  background-color: #883600;
+}
+
+.silver {
+  background-color: rgb(104, 104, 104);
+}
+
+.gold {
+  background-color: gold;
+}
+
+.tier-container-active .plate { cursor: pointer; z-index: 10; display: block; opacity: 1; transition: 0.25s; 
+}
+
+.tier-container-active .plate:nth-last-of-type(3) {
+  top: -100%;
+  right: -130%;
+  background-color: #883600;
+  color: white;
+}
+
+.tier-container-active .plate:nth-last-of-type(2) {
+  right: -230%;
+  top: -187%;
+  background-color: rgb(104, 104, 104);
+  color: white;
+}
+
+.tier-container-active .plate:nth-last-of-type(1) {
+  right: -330%;
+  bottom: 274%;
+  background-color: gold;
+  color: white;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.hidden {
+  visibility: hidden;
+}
+
+.plate {
+  font-family: 'Patua One', cursive;
+
+  text-align: center;
+  margin-left: 5px;
+  margin-top: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(32, 32, 32);
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-size: 70%;
+  opacity: 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 3px #c7aa6f;
+  transition: 0s;
+  z-index: -1;
+  font-size: 1.9rem;
+}
+
+.plate:hover {
+  box-shadow: 0px 0px 1px 3px #c7aa6f;
+}
+
+/* MEDIA QUERIES */
 @media screen and (max-width: 500px) {
   .summoner-search-form {
     width: 70%;
