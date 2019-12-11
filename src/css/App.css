@@ -729,7 +729,11 @@ select {
   footer {
     font-size: 0.2rem;
   }
-    
+
+  .selection-table-header-head {
+    font-size: 0.5rem;
+  }
+
   .selection-table {
     margin-top: 22%;
   }
