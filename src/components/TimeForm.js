@@ -14,7 +14,7 @@ class TimeForm extends React.Component {
 							checked={this.props.selectedTime === "30days"}
 							onChange={this.props.handleTimeChange}
 						></input>
-						<div className="selection-time-button">30 days</div>
+						<div className="selection-time-button">Last 30 days</div>
 					</div>
 				</label>
 				<label className="selection-button-label-time">
@@ -26,7 +26,7 @@ class TimeForm extends React.Component {
 							checked={this.props.selectedTime === "7days"}
 							onChange={this.props.handleTimeChange}
 						></input>
-						<div className="selection-time-button">7 Days</div>
+						<div className="selection-time-button">Last 7 Days</div>
 					</div>
 				</label>
 				<label className="selection-button-label-time">
@@ -38,7 +38,7 @@ class TimeForm extends React.Component {
 							checked={this.props.selectedTime === "1day"}
 							onChange={this.props.handleTimeChange}
 						></input>
-						<div className="selection-time-button">24 Hours</div>
+						<div className="selection-time-button">Last 24 Hours</div>
 					</div>
 				</label>
 			</form>

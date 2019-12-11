@@ -26,6 +26,7 @@ import predator from "../css/Images/Traits/predator.png";
 import ranger from "../css/Images/Traits/ranger.png";
 import summoner from "../css/Images/Traits/summoner.png";
 import warden from "../css/Images/Traits/warden.png";
+import empty from "../css/Images/Traits/empty.png";
 
 class TraitForm extends React.Component {
 	state = {
@@ -51,6 +52,7 @@ class TraitForm extends React.Component {
 
 	render() {
 		const iconLookup = {
+			"": empty,
 			cloud,
 			crystal,
 			desert,
@@ -331,6 +333,7 @@ class TraitForm extends React.Component {
 					handleTierChange={this.props.handleTierChange}
 					traitSlotStyle={traitSlotStyle}
 					trait={this.props.trait}
+					tier={this.props.tier}
 					slot={this.props.slot}
 				/>
 				<div className="selection-clear-container">

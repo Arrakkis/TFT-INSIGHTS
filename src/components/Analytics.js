@@ -14,7 +14,19 @@ class Analytics extends React.Component {
 			slot2: { active: false, trait: "", tier: 0 },
 			slot3: { active: false, trait: "", tier: 0 }
 		},
-		results: { cloud: { 2: { winrate: 0.55, popularity: 0.34 } } }
+		results: {
+			summoner: {
+				3: {
+					blademaster: {
+						6: {
+							inferno: {
+								3: { null: { 0: { winrate: 0.55, popularity: 0.34 } } }
+							}
+						}
+					}
+				}
+			}
+		}
 	};
 
 	handleRequest = () => {
@@ -96,7 +108,7 @@ class Analytics extends React.Component {
 					handleTraitChange={this.handleTraitChange}
 					handleTraitClear={this.handleTraitClear}
 				/>
-				<TierResults results={this.state.results} />
+				<TierResults results={this.state.results} /> {/* DO NOT ENTER */}
 				<button onClick={this.handleRequest}>REQUEST ZE DATA</button>
 				<footer>
 					<div className="footer-links">

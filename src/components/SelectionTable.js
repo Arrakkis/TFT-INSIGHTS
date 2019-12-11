@@ -10,9 +10,11 @@ class SelectionTable extends React.Component {
 			<table className="selection-table">
 				<thead className="selection-table-header">
 					<tr className="selection-table-header-row">
-						<th className="selection-table-header-head">TRAITS</th>
-						<th className="selection-table-header-head">TIME</th>
-						<th className="selection-table-header-head">RANK</th>
+						<th className="selection-table-header-head">T R A I T S</th>
+						<th className="selection-table-header-head" id="time-header">
+							T I M E
+						</th>
+						<th className="selection-table-header-head">R A N K</th>
 					</tr>
 				</thead>
 				<tbody className="selection-table-body">
@@ -23,6 +25,7 @@ class SelectionTable extends React.Component {
 								handleTraitClear={this.props.handleTraitClear}
 								handleTierChange={this.props.handleTierChange}
 								trait={this.props.selectedTraits.slot1.trait}
+								tier={this.props.selectedTraits.slot1.tier}
 								active={this.props.selectedTraits.slot1.active}
 								slot="slot1"
 							/>
@@ -31,6 +34,7 @@ class SelectionTable extends React.Component {
 								handleTraitClear={this.props.handleTraitClear}
 								handleTierChange={this.props.handleTierChange}
 								trait={this.props.selectedTraits.slot2.trait}
+								tier={this.props.selectedTraits.slot2.tier}
 								active={this.props.selectedTraits.slot2.active}
 								slot="slot2"
 							/>
@@ -39,6 +43,7 @@ class SelectionTable extends React.Component {
 								handleTraitClear={this.props.handleTraitClear}
 								handleTierChange={this.props.handleTierChange}
 								trait={this.props.selectedTraits.slot3.trait}
+								tier={this.props.selectedTraits.slot3.tier}
 								active={this.props.selectedTraits.slot3.active}
 								slot="slot3"
 							/>
