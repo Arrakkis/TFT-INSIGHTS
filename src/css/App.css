@@ -194,21 +194,23 @@ th {
   padding: 20px;
   padding-left: 30px;
   width: 35%;
-  border: 0;
-  border-radius: 3px;
+  border: solid 2px #c7aa6f;
   box-shadow: 0px 0px 5px black;
-  background-color: rgb(250, 250, 250);
-  color: #2d2d2d;
+  background-color: #1e2328;
+  color: #fdd88e;
   position: relative;
 }
 
 .summoner-search-box {
   width: 70%;
   border: 0;
-  color: #2d2d2d;  
+  color: #fdd88e;
+  font-weight: 400;
+  font-family: 'Patua One', cursive;
+  font-size: .9rem;
   outline: 0;
   font-size: 16px;
-  background-color: rgb(250, 250, 250);
+  background-color: #1e2328;
 }
 
 .summoner-search-region {
@@ -217,13 +219,13 @@ th {
   margin-right: 1%;
   padding:4px;
   width: 29px;
-  border-left: solid 1px black;
+  border-left: solid 1px #c7aa6f;
   border-top: 0;
   border-bottom: 0;
-  border-right: solid 1px black;
+  border-right: solid 1px #c7aa6f;
   font-family: Roboto, sans-serif;
-  background-color: rgb(250, 250, 250);
-  color: #2d2d2d;
+  background-color: #1e2328;
+  color: #fdd88e;
   text-align: center;
   font-size: 75%;
   outline: 0;
@@ -233,11 +235,11 @@ th {
 .summoner-search-submit {
   font-weight: 400;
   font-family: Roboto, sans-serif;
-  color: #2d2d2d;
+  color: #fdd88e;
   font-size: 100%;
   outline: 0;
   border: 0;
-  background-color: rgb(250, 250, 250);
+  background-color: #1e2328;
   display: inline-block;
   cursor: pointer;
   padding: 0;
@@ -275,7 +277,10 @@ footer {
 }
 
 ::placeholder {
-  color:#2d2d2d;
+  color:#fdd88e;
+  font-weight: 400;
+  font-family: 'Patua One', cursive;
+  font-size: .9rem;
 }
 
 select {
