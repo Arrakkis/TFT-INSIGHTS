@@ -4,7 +4,7 @@ import NotFound from "./NotFound";
 import Home from "./Home";
 import Profile from "./Profile";
 import Analytics from "./Analytics";
-import Builds from "./Builds";
+import Champions from "./Champions";
 import About from "./About";
 
 const Router = () => (
@@ -14,7 +14,7 @@ const Router = () => (
 			<Route exact path="/home" component={Home} />
 			<Route exact path="/profile/:region/:profileId" component={Profile} />
 			<Route exact path="/analytics" component={Analytics} />
-			<Route exact path="/builds" component={Builds} />
+			<Route exact path="/champions" component={Champions} />
 			<Route exact path="/about" component={About} />
 			<Route component={NotFound} />
 		</Switch>

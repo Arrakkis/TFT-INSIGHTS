@@ -39,7 +39,7 @@ class NavBar extends React.Component {
 					index={3}
 					handleClick={this.handleClick}
 					isActive={this.state.activeIndex === 3}
-					destination="/builds"
+					destination="/champions"
 					history={this.props.history}
 				/>
 				<div className="navbar-wall"></div>
