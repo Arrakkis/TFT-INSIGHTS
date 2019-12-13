@@ -15,38 +15,43 @@ class NavBar extends React.Component {
 	render() {
 		return (
 			<div className="navbar">
+				<div className="navbar-wall"></div>
 				<NavButton
-					content="HOME"
+					content="H O M E"
 					index={1}
 					handleClick={this.handleClick}
 					isActive={this.state.activeIndex === 1}
 					destination="/home"
 					history={this.props.history}
 				/>
+				<div className="navbar-wall"></div>
 				<NavButton
-					content="ANALYTICS"
+					content="A N A L Y T I C S"
 					index={2}
 					handleClick={this.handleClick}
 					isActive={this.state.activeIndex === 2}
 					destination="/analytics"
 					history={this.props.history}
 				/>
+				<div className="navbar-wall"></div>
 				<NavButton
-					content="RECENT BUILDS"
+					content="C H A M P I O N S"
 					index={3}
 					handleClick={this.handleClick}
 					isActive={this.state.activeIndex === 3}
 					destination="/builds"
 					history={this.props.history}
 				/>
+				<div className="navbar-wall"></div>
 				<NavButton
-					content="PROFILE"
+					content="P R O F I L E"
 					index={4}
 					handleClick={this.handleClick}
 					isActive={this.state.activeIndex === 4}
 					destination="/profile"
 					history={this.props.history}
 				/>
+				<div className="navbar-wall"></div>
 			</div>
 		);
 	}

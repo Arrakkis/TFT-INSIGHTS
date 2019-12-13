@@ -50,6 +50,15 @@ class TraitForm extends React.Component {
 		this.setState(newState);
 	};
 
+	getSnapshotBeforeUpdate(prevProps, prevState) {
+		return prevProps.trait;
+	}
+	componentDidUpdate(prevProps, prevState, snapshot) {
+		if (this.props.active === false && this.state.slot.activeMenu !== "") {
+			this.setState({ slot: { activeMenu: "" } });
+		}
+	}
+
 	render() {
 		const iconLookup = {
 			"": empty,
@@ -122,6 +131,12 @@ class TraitForm extends React.Component {
 			formClass = "selection-table-body-selections-traits locked";
 		} else {
 			formClass = "selection-table-body-selections-traits";
+		}
+
+		let selectionClearClass = "selection-clear";
+
+		if (this.props.trait === "") {
+			selectionClearClass = "selection-clear locked";
 		}
 
 		return (
@@ -338,7 +353,7 @@ class TraitForm extends React.Component {
 				/>
 				<div className="selection-clear-container">
 					<div
-						className="selection-clear"
+						className={selectionClearClass}
 						onClick={() => {
 							this.props.handleTraitClear(this.props.slot);
 						}}
