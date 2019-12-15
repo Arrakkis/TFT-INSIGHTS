@@ -14,7 +14,8 @@ class Analytics extends React.Component {
 			slot1: { active: true, trait: "", tier: 0 },
 			slot2: { active: false, trait: "", tier: 0 },
 			slot3: { active: false, trait: "", tier: 0 }
-		}
+		},
+		activeMenu: ""
 	};
 
 	componentDidMount() {

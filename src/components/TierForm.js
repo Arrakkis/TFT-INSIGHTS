@@ -42,7 +42,7 @@ class TierForm extends React.Component {
 	render() {
 		const tierLookup = {
 			cloud: [2, 3, 4],
-			crystal: [-1, 2, 4],
+			crystal: [2, -1, 4],
 			desert: [-1, 2, 4],
 			electric: [2, 3, 4],
 			glacial: [2, 4, 6],
