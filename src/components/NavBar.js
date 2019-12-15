@@ -35,15 +35,6 @@ class NavBar extends React.Component {
 				/>
 				<div className="navbar-wall"></div>
 				<NavButton
-					content="C H A M P I O N S"
-					index={3}
-					handleClick={this.handleClick}
-					isActive={this.state.activeIndex === 3}
-					destination="/champions"
-					history={this.props.history}
-				/>
-				<div className="navbar-wall"></div>
-				<NavButton
 					content="P R O F I L E"
 					index={4}
 					handleClick={this.handleClick}

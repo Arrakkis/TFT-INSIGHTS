@@ -138,10 +138,10 @@ class Analytics extends React.Component {
 
 	reOrderBy = (column, order) => {
 		let newState = { ...this.state };
-		let newResults = this.state.results.slice();
+		let newResults = this.state.filteredResults.slice();
 		newResults = orderBy(newResults, column, order);
 		newResults = newResults.filter(item => item !== undefined);
-		newState.results = newResults;
+		newState.filteredResults = newResults;
 		this.setState(newState);
 	};
 
@@ -181,6 +181,7 @@ class Analytics extends React.Component {
 	handleTraitChange = (slot, trait) => {
 		let newState = { ...this.state };
 		newState.selectedTraits[slot].trait = trait;
+		newState.selectedTraits[slot].tier = 0;
 		if (slot === "slot1") {
 			newState.selectedTraits.slot2.active = true;
 		}
@@ -220,7 +221,6 @@ class Analytics extends React.Component {
 				<NavBar history={this.props.history} activeIndex={2} />
 				<div className="background1"></div>
 				<SelectionTable
-					setOptions={this.setOptions}
 					selectedTraits={this.state.selectedTraits}
 					selectedTime={this.state.selectedTime}
 					selectedRank={this.state.selectedRank}
@@ -234,7 +234,6 @@ class Analytics extends React.Component {
 					results={this.state.filteredResults}
 					reOrderBy={this.reOrderBy}
 				/>
-				<button onClick={this.handleRequest}>REQUEST ZE DATA</button>
 			</span>
 		);
 	}

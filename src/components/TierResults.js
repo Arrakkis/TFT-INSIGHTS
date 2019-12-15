@@ -145,7 +145,9 @@ class TierResults extends React.Component {
 					<table className="results-table">
 						<thead className="results-table-header">
 							<tr className="results-table-header-row">
-								<th className="results-table-header-head">T R A I T S</th>
+								<th className="results-table-header-head">
+									C O M P O S T I O N
+								</th>
 								<th className="results-table-header-head">C H A M P I O N S</th>
 								<th className="results-table-header-head">
 									P O P U L A R I T Y{" "}
