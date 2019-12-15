@@ -89,6 +89,14 @@ th {
   top: 0px;
   transition: 1s;
 }
+
+.results-table-header-sort {
+  display: inline-block;
+  margin-left: 5%;
+  cursor: pointer;
+  color: #c7aa6f;
+}
+
 /* LARGE CONTAINERS AND BACKGROUNDS */
 
 .mainContainer {

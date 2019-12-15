@@ -2,7 +2,6 @@ import React from "react";
 import "../css/App.css";
 import NavBar from "./NavBar";
 import logo from "../css/Images/logo2.png";
-import { Link } from "react-router-dom";
 
 class About extends React.Component {
 	render() {

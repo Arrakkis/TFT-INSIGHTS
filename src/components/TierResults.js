@@ -29,6 +29,35 @@ import warden from "../css/Images/Traits/warden.png";
 import empty from "../css/Images/Traits/empty.png";
 
 class TierResults extends React.Component {
+	state = {
+		winrate: { order: "▽" },
+		popularity: { order: "▽" },
+		active: "winrate"
+	};
+
+	handleSortingOrder = column => {
+		let newState = { ...this.state };
+		if (column === "winrate") {
+			if (this.state.winrate.order === "▽") {
+				newState.winrate.order = "△";
+				this.props.reOrderBy(column, "asc");
+			} else {
+				newState.winrate.order = "▽";
+				this.props.reOrderBy(column, "desc");
+			}
+		}
+		if (column === "popularity") {
+			if (this.state.popularity.order === "▽") {
+				newState.popularity.order = "△";
+				this.props.reOrderBy(column, "asc");
+			} else {
+				newState.popularity.order = "▽";
+				this.props.reOrderBy(column, "desc");
+			}
+		}
+		this.setState(newState);
+	};
+
 	render() {
 		const iconLookup = {
 			null: empty,
@@ -89,141 +118,218 @@ class TierResults extends React.Component {
 			warden: { 2: "bronze", 4: "silver", 6: "gold" }
 		};
 
-		let i = 0;
+		let sortingArrowClass = "results-table-header-sort";
 
-		return (
-			<div className="results-table-container">
-				<table className="results-table">
-					<thead className="results-table-header">
-						<tr className="results-table-header-row">
-							<th className="results-table-header-head">T R A I T S</th>
-							<th className="results-table-header-head">P O P U L A R I T Y</th>
-							<th className="results-table-header-head">C H A M P I O N S</th>
-							<th className="results-table-header-head">W I N R A T E</th>
-						</tr>
-					</thead>
-					<tbody className="results-table-body">
-						{Object.keys(this.props.results).map(trait1 => {
-							return Object.keys(this.props.results[trait1]).map(tier1 => {
-								return Object.keys(this.props.results[trait1][tier1]).map(
-									trait2 => {
-										return Object.keys(
-											this.props.results[trait1][tier1][trait2]
-										).map(tier2 => {
-											return Object.keys(
-												this.props.results[trait1][tier1][trait2][tier2]
-											).map(trait3 => {
-												return Object.keys(
-													this.props.results[trait1][tier1][trait2][tier2][
-														trait3
+		let i = 0;
+		if (this.props.results === null || this.props.results === undefined) {
+			return (
+				<div className="results-table-container">
+					<table className="results-table">
+						<thead className="results-table-header">
+							<tr className="results-table-header-row">
+								<th className="results-table-header-head">T R A I T S</th>
+								<th className="results-table-header-head">C H A M P I O N S</th>
+								<th className="results-table-header-head">
+									P O P U L A R I T Y
+								</th>
+								<th className="results-table-header-head">W I N R A T E</th>
+							</tr>
+						</thead>
+						<tbody className="results-table-body"></tbody>
+					</table>
+				</div>
+			);
+		} else
+			return (
+				<div className="results-table-container">
+					<table className="results-table">
+						<thead className="results-table-header">
+							<tr className="results-table-header-row">
+								<th className="results-table-header-head">T R A I T S</th>
+								<th className="results-table-header-head">C H A M P I O N S</th>
+								<th className="results-table-header-head">
+									P O P U L A R I T Y{" "}
+									<div
+										className={sortingArrowClass}
+										onClick={() => this.handleSortingOrder("popularity")}
+									>
+										{this.state.popularity.order}
+									</div>
+								</th>
+								<th className="results-table-header-head">
+									W I N R A T E{" "}
+									<div
+										className={sortingArrowClass}
+										onClick={() => this.handleSortingOrder("winrate")}
+									>
+										{this.state.winrate.order}
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody className="results-table-body">
+							{this.props.results.map(result => {
+								if (i > 25) {
+									return null;
+								}
+								i = i + 1;
+								return (
+									<tr key={i} className="results-table-body-row">
+										<td className="results-table-body-trait">
+											<div
+												className={
+													"results-table-body-trait-slot " +
+													tierLookup[result.traits[0].trait][
+														result.traits[0].tier
 													]
-												).map(tier3 => {
-													return Object.keys(
-														this.props.results[trait1][tier1][trait2][tier2][
-															trait3
-														][tier3]
-													).map(trait4 => {
-														return Object.keys(
-															this.props.results[trait1][tier1][trait2][tier2][
-																trait3
-															][tier3][trait4]
-														).map(tier4 => {
-															i = i + 1;
-															return (
-																<tr key={i} className="results-table-body-row">
-																	<td className="results-table-body-trait">
-																		<div
-																			className={
-																				"results-table-body-trait-slot " +
-																				tierLookup[trait1][tier1]
-																			}
-																		>
-																			<div
-																				className="results-table-body-trait-item"
-																				style={{
-																					backgroundImage: `url(${iconLookup[trait1]})`
-																				}}
-																			></div>
-																		</div>
-																		<div
-																			className={
-																				"results-table-body-trait-slot " +
-																				tierLookup[trait2][tier2]
-																			}
-																		>
-																			<div
-																				className="results-table-body-trait-item"
-																				style={{
-																					backgroundImage: `url(${iconLookup[trait2]})`
-																				}}
-																			></div>
-																		</div>
-																		<div
-																			className={
-																				"results-table-body-trait-slot " +
-																				tierLookup[trait3][tier3]
-																			}
-																		>
-																			<div
-																				className="results-table-body-trait-item"
-																				style={{
-																					backgroundImage: `url(${iconLookup[trait3]})`
-																				}}
-																			></div>
-																		</div>
-																		<div
-																			className={
-																				"results-table-body-trait-slot " +
-																				tierLookup[trait4][tier4]
-																			}
-																		>
-																			<div
-																				className="results-table-body-trait-item"
-																				style={{
-																					backgroundImage: `url(${iconLookup[trait4]})`
-																				}}
-																			></div>
-																		</div>
-																	</td>
-																	<td className="results-table-body-popularity">
-																		{ratioToPercentage(
-																			this.props.results[trait1][tier1][trait2][
-																				tier2
-																			][trait3][tier3][trait4][tier4].popularity
-																		)}
-																	</td>
-																	<td className="results-table-body-champions"></td>
-																	<td className="results-table-body-winrate">
-																		{ratioToPercentage(
-																			this.props.results[trait1][tier1][trait2][
-																				tier2
-																			][trait3][tier3][trait4][tier4].winrate
-																		)}
-																	</td>
-																</tr>
-															);
-														});
-													});
-												});
-											});
-										});
-									}
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${
+															iconLookup[result.traits[0].trait]
+														})`
+													}}
+												></div>
+											</div>
+											<div
+												className={
+													"results-table-body-trait-slot " +
+													tierLookup[result.traits[1].trait][
+														result.traits[1].tier
+													]
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${
+															iconLookup[result.traits[1].trait]
+														})`
+													}}
+												></div>
+											</div>
+											<div
+												className={
+													"results-table-body-trait-slot " +
+													tierLookup[result.traits[2].trait][
+														result.traits[2].tier
+													]
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${
+															iconLookup[result.traits[2].trait]
+														})`
+													}}
+												></div>
+											</div>
+											<div
+												className={
+													"results-table-body-trait-slot " +
+													tierLookup[result.traits[3].trait][
+														result.traits[3].tier
+													]
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${
+															iconLookup[result.traits[3].trait]
+														})`
+													}}
+												></div>
+											</div>
+										</td>
+										<td className="results-table-body-champions"></td>
+										<td className="results-table-body-popularity">
+											{ratioToPercentage(result.popularity)}
+										</td>
+										<td className="results-table-body-winrate">
+											{ratioToPercentage(result.winrate)}
+										</td>
+									</tr>
 								);
-							});
-						})}
-					</tbody>
-				</table>
-			</div>
-		);
+							})}
+						</tbody>
+					</table>
+				</div>
+			);
 	}
 }
 
 export default TierResults;
 
-/*<tr className="results-table-body-row">
-												<td className="results-table-body-trait">
-													<div className={"results-table-body-trait-slot " + tierLookup[trait1][]}>
-														<div className="results-table-body-trait-item"></div>
-													</div>
-												</td>
-											</tr>; */
+/*<tr key={i} className="results-table-body-row">
+										<td className="results-table-body-trait">
+											<div
+												className={
+													"results-table-body-trait-slot " + tierLookup[i][0]
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${iconLookup[i][0]})`
+													}}
+												></div>
+											</div>
+										</td>
+									</tr><div
+												className={
+													"results-table-body-trait-slot " +
+													tierLookup[trait2][tier2]
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${iconLookup[trait2]})`
+													}}
+												></div>
+											</div>
+											<div
+												className={
+													"results-table-body-trait-slot " +
+													tierLookup[trait3][tier3]
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${iconLookup[trait3]})`
+													}}
+												></div>
+											</div>
+											<div
+												className={
+													"results-table-body-trait-slot " +
+													tierLookup[trait4][tier4]
+												}
+											>
+												<div
+													className="results-table-body-trait-item"
+													style={{
+														backgroundImage: `url(${iconLookup[trait4]})`
+													}}
+												></div>
+											</div>
+										</td>
+										<td className="results-table-body-popularity">
+											{ratioToPercentage(
+												this.props.results[trait1][tier1][trait2][tier2][
+													trait3
+												][tier3][trait4][tier4].popularity
+											)}
+										</td>
+										<td className="results-table-body-champions"></td>
+										<td className="results-table-body-winrate">
+											{ratioToPercentage(
+												this.props.results[trait1][tier1][trait2][tier2][
+													trait3
+												][tier3][trait4][tier4].winrate
+											)}</td>*/

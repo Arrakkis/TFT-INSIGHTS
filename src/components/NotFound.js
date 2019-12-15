@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/App.css";
 import NavBar from "./NavBar";
-import { Link } from "react-router-dom";
 
 class NotFound extends React.Component {
 	render() {
