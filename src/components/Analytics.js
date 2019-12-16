@@ -220,6 +220,14 @@ class Analytics extends React.Component {
 			<span className="mainContainer">
 				<NavBar history={this.props.history} activeIndex={2} />
 				<div className="background1"></div>
+				<div className="analysis-header-container">
+					<a className="analysis-header active" href="/analytics">
+						C O M P O S I T I O N S
+					</a>
+					<a className="analysis-header" href="/champions">
+						C H A M P I O N S
+					</a>
+				</div>
 				<SelectionTable
 					selectedTraits={this.state.selectedTraits}
 					selectedTime={this.state.selectedTime}

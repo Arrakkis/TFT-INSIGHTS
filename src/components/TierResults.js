@@ -27,12 +27,15 @@ import ranger from "../css/Images/Traits/ranger.png";
 import summoner from "../css/Images/Traits/summoner.png";
 import warden from "../css/Images/Traits/warden.png";
 import empty from "../css/Images/Traits/empty.png";
+import CompSizeSelector from "./CompSizeSelector";
 
 class TierResults extends React.Component {
 	state = {
 		winrate: { order: "▽" },
 		popularity: { order: "▽" },
-		active: "winrate"
+		active: "winrate",
+		currentSlice: 0,
+		activeCompSelector: "?"
 	};
 
 	handleSortingOrder = column => {
@@ -55,6 +58,43 @@ class TierResults extends React.Component {
 				this.props.reOrderBy(column, "desc");
 			}
 		}
+		this.setState(newState);
+	};
+
+	handlePageChange = type => {
+		let newState = { ...this.state };
+		if (type === "single") {
+			if (this.props.results.length > this.state.currentSlice + 25) {
+				newState.currentSlice = this.state.currentSlice + 25;
+			} else {
+				newState.currentSlice =
+					this.props.results.length - (this.props.results.length % 25);
+			}
+		} else if (type === "double") {
+			if (this.props.results.length > this.state.currentSlice + 50) {
+				newState.currentSlice = this.state.currentSlice + 50;
+			} else {
+				newState.currentSlice =
+					this.props.results.length - (this.props.results.length % 25);
+			}
+		} else if (type === "end") {
+			newState.currentSlice =
+				this.props.results.length - (this.props.results.length % 25);
+		} else if (type === "back") {
+			if (this.state.currentSlice - 25 >= 0) {
+				newState.currentSlice = this.state.currentSlice - 25;
+			} else {
+				newState.currentSlice = 0;
+			}
+		} else if (type === "start") {
+			newState.currentSlice = 0;
+		}
+		this.setState(newState);
+	};
+
+	handleCompSizeChange = size => {
+		let newState = { ...this.state };
+		newState.activeCompSelector = size;
 		this.setState(newState);
 	};
 
@@ -118,6 +158,7 @@ class TierResults extends React.Component {
 			warden: { 2: "bronze", 4: "silver", 6: "gold" }
 		};
 
+		let currentSlice = this.state.currentSlice;
 		let sortingArrowClass = "results-table-header-sort";
 
 		let i = 0;
@@ -142,14 +183,80 @@ class TierResults extends React.Component {
 		} else
 			return (
 				<div className="results-table-container">
+					<div className="results-table-comp-size-container">
+						<div className="tooltip-button">
+							ℹ<span>Selects the number of traits in the composition.</span>
+						</div>
+						<CompSizeSelector
+							handleCompSizeChange={this.handleCompSizeChange}
+							active={this.state.activeCompSelector === "?"}
+							size={"?"}
+						/>
+						<CompSizeSelector
+							handleCompSizeChange={this.handleCompSizeChange}
+							active={this.state.activeCompSelector === 2}
+							size={2}
+						/>
+						<CompSizeSelector
+							handleCompSizeChange={this.handleCompSizeChange}
+							active={this.state.activeCompSelector === 3}
+							size={3}
+						/>
+						<CompSizeSelector
+							handleCompSizeChange={this.handleCompSizeChange}
+							active={this.state.activeCompSelector === 4}
+							size={4}
+						/>
+					</div>
+					<div className="results-table-page-select-container">
+						<div
+							className="results-table-page-select"
+							onClick={() => this.handlePageChange("start")}
+						>
+							{"| <"}
+						</div>
+						<div
+							className="results-table-page-select"
+							onClick={() => this.handlePageChange("back")}
+						>
+							{"<"}
+						</div>
+						<div
+							className="results-table-page-select"
+							onClick={() => this.handlePageChange("single")}
+						>
+							>
+						</div>
+						<div
+							className="results-table-page-select"
+							onClick={() => this.handlePageChange("double")}
+						>
+							>>
+						</div>
+						<div
+							className="results-table-page-select"
+							onClick={() => this.handlePageChange("end")}
+						>
+							> |
+						</div>
+					</div>
+
 					<table className="results-table">
 						<thead className="results-table-header">
 							<tr className="results-table-header-row">
 								<th className="results-table-header-head">
 									C O M P O S T I O N
 								</th>
-								<th className="results-table-header-head">C H A M P I O N S</th>
 								<th className="results-table-header-head">
+									T I M E S{" - "}P L A Y E D
+								</th>
+								<th className="results-table-header-head">
+									<div className="tooltip-button">
+										ℹ
+										<span>
+											Percentage of games that include this composition.
+										</span>
+									</div>
 									P O P U L A R I T Y{" "}
 									<div
 										className={sortingArrowClass}
@@ -159,6 +266,16 @@ class TierResults extends React.Component {
 									</div>
 								</th>
 								<th className="results-table-header-head">
+									<div className="tooltip-button">
+										ℹ
+										<span>
+											Weighted average of this composition's position in the
+											game. See:{" "}
+											<a className="tooltip-button-anchor" href="/appendix">
+												Appendix
+											</a>
+										</span>
+									</div>
 									W I N R A T E{" "}
 									<div
 										className={sortingArrowClass}
@@ -170,14 +287,20 @@ class TierResults extends React.Component {
 							</tr>
 						</thead>
 						<tbody className="results-table-body">
-							{this.props.results.map(result => {
+							{this.props.results.slice(currentSlice).map(result => {
 								if (i > 25) {
 									return null;
 								}
 								i = i + 1;
+								let rowStyle = {};
+								if (result.winrate > 0.6) {
+									rowStyle = { backgroundColor: "#1a1313" };
+								} else if (result.winrate < 0.4) {
+									rowStyle = { backgroundColor: "#09090d" };
+								}
 								return (
 									<tr key={i} className="results-table-body-row">
-										<td className="results-table-body-trait">
+										<td className="results-table-body-trait" style={rowStyle}>
 											<div
 												className={
 													"results-table-body-trait-slot " +
@@ -247,18 +370,62 @@ class TierResults extends React.Component {
 												></div>
 											</div>
 										</td>
-										<td className="results-table-body-champions"></td>
+										<td className="results-table-body-games"></td>
 										<td className="results-table-body-popularity">
 											{ratioToPercentage(result.popularity)}
+											<div
+												className="results-table-percentage-bar"
+												style={{
+													width: `${result.popularity * 90}%`,
+													opacity: result.popularity
+												}}
+											></div>
 										</td>
 										<td className="results-table-body-winrate">
 											{ratioToPercentage(result.winrate)}
+											<div
+												className="results-table-percentage-bar"
+												style={{
+													width: `${result.winrate * 90}%`,
+													opacity: result.winrate
+												}}
+											></div>
 										</td>
 									</tr>
 								);
 							})}
 						</tbody>
 					</table>
+					<div
+						className="results-table-page-select"
+						onClick={() => this.handlePageChange("start")}
+					>
+						{"| <"}
+					</div>
+					<div
+						className="results-table-page-select"
+						onClick={() => this.handlePageChange("back")}
+					>
+						{"<"}
+					</div>
+					<div
+						className="results-table-page-select"
+						onClick={() => this.handlePageChange("single")}
+					>
+						>
+					</div>
+					<div
+						className="results-table-page-select"
+						onClick={() => this.handlePageChange("double")}
+					>
+						>>
+					</div>
+					<div
+						className="results-table-page-select"
+						onClick={() => this.handlePageChange("end")}
+					>
+						> |
+					</div>
 				</div>
 			);
 	}

@@ -65,6 +65,14 @@ class Champions extends React.Component {
 			<span className="mainContainer">
 				<NavBar history={this.props.history} activeIndex={0} />
 				<div className="background1"></div>
+				<div className="analysis-header-container">
+					<a className="analysis-header" href="/analytics">
+						C O M P O S I T I O N S
+					</a>
+					<a className="analysis-header active" href="/champions">
+						C H A M P I O N S
+					</a>
+				</div>
 				<ChampionTable
 					selectedTime={this.state.selectedTime}
 					selectedRank={this.state.selectedRank}
