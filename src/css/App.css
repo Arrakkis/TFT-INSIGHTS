@@ -165,6 +165,58 @@ th {
 }
 
 
+/* APPENDIX TABLE */
+
+.appendix-table {
+  border-collapse: collapse;
+  border: solid 1px #c7aa6f;
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: rgba(0, 0, 0, 0.623);
+  color: #c7aa6f;
+}
+
+.appendix-table-body-cell-term {
+  padding: 10px;
+  border: solid 1px #c7aa6f;
+}
+
+.appendix-table-head-row th {
+  font-weight: 400;
+  padding: 10px;
+  border: solid 1px #c7aa6f;
+}
+
+.appendix-table-body-cell-description {
+  font-weight: 400;
+  border: solid 1px #c7aa6f;
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.appendix-table-body-row td h3 {
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+.appendix-description-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #bdbdbd;
+  text-align: left;
+}
+
+br {
+  display: block;
+  width: 50%;
+  height: 50px;
+  content: " ";
+}
+
 /* LARGE CONTAINERS AND BACKGROUNDS */
 
 .mainContainer {

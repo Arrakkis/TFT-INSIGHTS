@@ -6,6 +6,7 @@ import Profile from "./Profile";
 import Analytics from "./Analytics";
 import Champions from "./Champions";
 import About from "./About";
+import Appendix from "./Appendix";
 
 const Router = () => (
 	<BrowserRouter>
@@ -16,6 +17,7 @@ const Router = () => (
 			<Route exact path="/analytics" component={Analytics} />
 			<Route exact path="/champions" component={Champions} />
 			<Route exact path="/about" component={About} />
+			<Route exact path="/appendix" component={Appendix} />
 			<Route component={NotFound} />
 		</Switch>
 	</BrowserRouter>
