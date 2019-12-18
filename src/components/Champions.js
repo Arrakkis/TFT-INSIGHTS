@@ -7,43 +7,22 @@ class Champions extends React.Component {
 	state = {
 		selectedTime: "30 days",
 		selectedRank: "All",
-		trait: ""
+		trait: "",
+		champ: ""
 	};
 
-	handleTraitChange = (slot, trait) => {
+	handleTraitChange = trait => {
 		let newState = { ...this.state };
-		newState.selectedTraits[slot].trait = trait;
-		if (slot === "slot1") {
-			newState.selectedTraits.slot2.active = true;
-		}
-		if (slot === "slot2") {
-			newState.selectedTraits.slot3.active = true;
-		}
-		this.setState(newState, () => {
-			this.handleFilterChange();
-		});
+		newState.trait = trait;
+		newState.champ = "";
+		this.setState(newState);
 	};
 
-	handleTraitClear = slot => {
+	handleAllClear = () => {
 		let newState = { ...this.state };
-		newState.selectedTraits[slot].trait = "";
-		newState.selectedTraits[slot].tier = 0;
-		if (slot === "slot1") {
-			newState.selectedTraits.slot2.active = false;
-			newState.selectedTraits.slot2.trait = "";
-			newState.selectedTraits.slot2.tier = 0;
-			newState.selectedTraits.slot3.active = false;
-			newState.selectedTraits.slot3.trait = "";
-			newState.selectedTraits.slot3.tier = 0;
-		}
-		if (slot === "slot2") {
-			newState.selectedTraits.slot3.active = false;
-			newState.selectedTraits.slot3.trait = "";
-			newState.selectedTraits.slot3.tier = 0;
-		}
-		this.setState(newState, () => {
-			this.handleFilterChange();
-		});
+		newState.trait = "";
+		newState.champ = "";
+		this.setState(newState);
 	};
 
 	handleTimeChange = event => {
@@ -60,10 +39,16 @@ class Champions extends React.Component {
 		this.setState(newState);
 	};
 
+	handleChampionSelection = champion => {
+		let newState = { ...this.state };
+		newState.champ = champion;
+		this.setState(newState);
+	};
+
 	render() {
 		return (
 			<span className="mainContainer">
-				<NavBar history={this.props.history} activeIndex={0} />
+				<NavBar history={this.props.history} activeIndex={2} />
 				<div className="background1"></div>
 				<div className="analysis-header-container">
 					<a className="analysis-header" href="/analytics">
@@ -72,10 +57,19 @@ class Champions extends React.Component {
 					<a className="analysis-header active" href="/champions">
 						C H A M P I O N S
 					</a>
+					<a className="analysis-header" href="/graphs">
+						G R A P H S
+					</a>
+					<a className="analysis-header" href="/appendix">
+						A P P E N D I X
+					</a>
 				</div>
 				<ChampionTable
+					champ={this.state.champ}
 					selectedTime={this.state.selectedTime}
 					selectedRank={this.state.selectedRank}
+					handleAllClear={this.handleAllClear}
+					handleChampionSelection={this.handleChampionSelection}
 					handleTimeChange={this.handleTimeChange}
 					handleRankChange={this.handleRankChange}
 					handleTraitChange={this.handleTraitChange}

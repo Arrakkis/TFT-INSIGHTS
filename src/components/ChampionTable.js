@@ -21,8 +21,10 @@ class ChampionTable extends React.Component {
 					<tr className="selection-table-body-row">
 						<td className="selection-table-body-cell">
 							<ChampionForm
+								champ={this.props.champ}
+								handleChampionSelection={this.props.handleChampionSelection}
 								handleTraitChange={this.props.handleTraitChange}
-								handleTraitClear={this.props.handleTraitClear}
+								handleAllClear={this.props.handleAllClear}
 								trait={this.props.trait}
 								active={true}
 							/>

@@ -6,8 +6,22 @@ class Appendix extends React.Component {
 	render() {
 		return (
 			<span className="mainContainer">
-				<NavBar history={this.props.history} activeIndex={0} />
+				<NavBar history={this.props.history} activeIndex={2} />
 				<div className="background1"></div>
+				<div className="analysis-header-container">
+					<a className="analysis-header" href="/analytics">
+						C O M P O S I T I O N S
+					</a>
+					<a className="analysis-header" href="/champions">
+						C H A M P I O N S
+					</a>
+					<a className="analysis-header" href="/graphs">
+						G R A P H S
+					</a>
+					<a className="analysis-header active" href="/appendix">
+						A P P E N D I X
+					</a>
+				</div>
 				<table className="appendix-table">
 					<thead className="appendix-table-head">
 						<tr className="appendix-table-head-row">
@@ -32,7 +46,7 @@ class Appendix extends React.Component {
 									score).
 									<br />
 									The overall score is divided by 7 * number of games that
-									composition appears in. This give us a ratio that determines
+									composition appears in. This gives us a ratio that determines
 									the average position of that composition.
 									<br />
 									In order to separate the myriad of different final
@@ -87,7 +101,7 @@ class Appendix extends React.Component {
 									Firstly, since the majority of compositions during a game do
 									not make it past top 4, it is important to assess compositions
 									that survived past the center stage of the game, and what
-									compositions failed to do so.These compositions often have
+									compositions failed to do so. These compositions often have
 									less traits, and lower overall tiers.
 									<br />
 									The current state of the Riot API doesn't allow us to see

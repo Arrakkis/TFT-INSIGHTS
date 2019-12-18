@@ -172,7 +172,7 @@ th {
   border: solid 1px #c7aa6f;
   width: 80%;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-bottom: 5%;
   background-color: rgba(0, 0, 0, 0.623);
   color: #c7aa6f;
@@ -224,9 +224,10 @@ br {
 }
 
 .analysis-header-container {
-  margin-left: 0%;
-  margin-right: 52%;
+  margin-left: 5%;
+  margin-right: 35%;
   margin-top: 5%;
+  width: 80%;
 }
 
 .analysis-header {
@@ -538,10 +539,111 @@ select {
 }
 
 .champion-clear-container{
-  display: table-cell;
   position: relative;
   vertical-align: middle;
   width: 15%;
+  margin-top: 10%;
+}
+
+.champion-clear:hover {
+  box-shadow: 0px 0px 5px #c7aa6f;
+  transition: 0.25s
+}
+
+.champion-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 8px;
+  top: 58px;
+}
+
+.champion-selector-plate {
+  font-family: 'Patua One', cursive;
+  text-align: center;
+  margin-left: 5px;
+  margin-top: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(32, 32, 32);
+  background-size: 120%;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 3px #c7aa6f;
+  transition: 0s;
+  z-index: -1;
+  font-size: 1.9rem;
+}
+
+.champion-container.active .champion-selector-plate {
+  cursor: pointer;
+  z-index: 10;
+  display: block;
+  opacity: 1;
+  transition: 0.25s;
+}
+
+.champion-selector-plate:nth-of-type(1) {
+  top: -225%;
+  left: 0%;
+}
+.champion-selector-plate:nth-of-type(2) {
+  top: -60%;
+  left: 0%;
+}
+.champion-selector-plate:nth-of-type(3) {
+  top: -275%;
+  left: -125%;
+}
+.champion-selector-plate:nth-of-type(4) {
+  top: -365%;
+  left: 125%;
+}
+.champion-selector-plate:nth-of-type(5) {
+  top: -220%;
+  left: 0%;
+}
+.champion-selector-plate:nth-of-type(6) {
+  top: -538%;
+  left: -225%;
+}
+.champion-selector-plate:nth-of-type(7) {
+  top: -626%;
+  left: 225%;
+}
+.champion-selector-plate:nth-of-type(8) {
+  top: -940%;
+  left: 0%;
+}
+.champion-selector-plate:nth-of-type(9) {
+  top: -900%;
+  left: -98%;
+}
+.champion-selector-plate:nth-of-type(10) {
+  top: -900%;
+  left: -98%;
+}
+
+.champion-selector-plate:hover {
+  box-shadow: 0px 0px 1px 4px #ffffff!important;
+}
+
+.champion-item-slot {
+  display: inline-block;
+  background-color: #1e2328;
+  border: solid 2px #c7aa6f;
+  border-radius: 50%;
+  background-size: 100%;
+  width: 66px;
+  height: 66px;
+  position: relative;
+  margin-left: 130px;
+  cursor: pointer;
+  transition: .5s;
 }
 
 .champion-clear {
@@ -555,15 +657,16 @@ select {
   cursor: pointer;
   transition: 0.25s;
   position: absolute;
-  left: 120%;
-  top: 30%;
+  left: 15%;
 }
 
-.champion-clear:hover {
-  box-shadow: 0px 0px 5px #c7aa6f;
-  transition: 0.25s
+.champion-body-selection {
+  display: table;
+  width: 800px;
+  z-index: -10;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
-
 /* ANALYSIS SELECTION TABLE */
 
 .selection-table {
@@ -837,9 +940,9 @@ select {
   height: 300px;
   transition: 0.25s;
   opacity: 1;
-  box-shadow: 0px 0px 5px rgb(255, 166, 0);
+  box-shadow: 0px 0px 1px 3px #c7aa6f;
   top: -117px;
-  left: -116px;
+  left: -117px;
   z-index: 1;
   overflow: hidden;
 }
@@ -906,20 +1009,21 @@ select {
   position: relative;
   margin-left: 130px;
   cursor: pointer;
-  transition: 1s;
+  transition: .5s;
 }
 
 .selection-tier-item {
   position: absolute;
   background-image: url(./Images/Traits/empty.png);
   background-size: 100%;
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
   background-position: center;
-  left: 11px;
-  top: 11px;
+  left: 10px;
+  top: 10px;
   cursor: pointer;
-  transition: 1s;
+  transition: .5s;
+  border-radius: 50%;
 }
 
 .tier-container {
@@ -988,7 +1092,6 @@ select {
 
 .plate {
   font-family: 'Patua One', cursive;
-
   text-align: center;
   margin-left: 5px;
   margin-top: 4px;

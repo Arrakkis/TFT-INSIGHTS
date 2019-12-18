@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/App.css";
 import ItemForm from "./ItemForm";
+import ChampionSelector from "./ChampionSelector";
 import cloud from "../css/Images/Traits/cloud.png";
 import crystal from "../css/Images/Traits/crystal.png";
 import desert from "../css/Images/Traits/desert.png";
@@ -36,8 +37,7 @@ class ChampionForm extends React.Component {
 	handlePlateSelect = trait => {
 		let newState = { ...this.state };
 		newState.slot.activeMenu = "";
-		this.setState(newState);
-		this.props.handleTraitChange(trait);
+		this.setState(newState, () => this.props.handleTraitChange(trait));
 	};
 
 	handleChange = entry => {
@@ -89,11 +89,6 @@ class ChampionForm extends React.Component {
 			warden
 		};
 
-		var traitSlotStyle = {
-			position: "absolute",
-			backgroundImage: `url(${iconLookup[this.props.trait]})`
-		};
-
 		let backgroundClass = "radial-background";
 		let classesContainer = "classes-container container";
 		let elementsContainer = "elements-container container";
@@ -125,18 +120,18 @@ class ChampionForm extends React.Component {
 			spinnerClass = "spinner-active";
 		}
 
-		let formClass = "selection-table-body-selections-traits";
+		let formClass = "champion-body-selection";
 
 		if (!this.props.active) {
-			formClass = "selection-table-body-selections-traits locked";
+			formClass = "champion-body-selection locked";
 		} else {
-			formClass = "selection-table-body-selections-traits";
+			formClass = "champion-body-selection";
 		}
 
-		let selectionClearClass = "selection-clear";
+		let selectionClearClass = "champion-clear";
 
 		if (this.props.trait === "") {
-			selectionClearClass = "selection-clear locked";
+			selectionClearClass = "champion-clear locked";
 		}
 
 		return (
@@ -344,13 +339,19 @@ class ChampionForm extends React.Component {
 						></div>
 					</div>
 				</label>
-				<ItemForm trait={this.props.trait} />
-				<div className="selection-clear-container">
+				<ChampionSelector
+					handleChampionSelection={this.props.handleChampionSelection}
+					champ={this.props.champ}
+					trait={this.props.trait}
+					traitIconStyle={{
+						backgroundImage: `url(${iconLookup[this.props.trait]})`
+					}}
+				/>
+				<ItemForm />
+				<div className="champion-clear-container">
 					<div
 						className={selectionClearClass}
-						onClick={() => {
-							this.props.handleTraitClear(this.props.slot);
-						}}
+						onClick={this.props.handleAllClear}
 					>
 						C L E A R
 					</div>

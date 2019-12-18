@@ -227,6 +227,12 @@ class Analytics extends React.Component {
 					<a className="analysis-header" href="/champions">
 						C H A M P I O N S
 					</a>
+					<a className="analysis-header" href="/graphs">
+						G R A P H S
+					</a>
+					<a className="analysis-header" href="/appendix">
+						A P P E N D I X
+					</a>
 				</div>
 				<SelectionTable
 					selectedTraits={this.state.selectedTraits}
