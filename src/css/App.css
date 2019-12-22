@@ -1,5 +1,6 @@
 @import "./ClassesPlates.css";
 @import "./ElementsPlates.css";
+@import "./Animate.css";
 
 /* GENERICS */
 
@@ -39,6 +40,40 @@ td, th {
 th {
   width: 100px
 }
+
+/* HOME PAGE */
+
+.home-display {
+  margin-top: 5%;
+  width: 80%;
+  position: relative;
+  display: flex;
+}
+
+.home-display img {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+
+.home-display-stacked-image {
+  position: absolute;
+  top: 0px;
+  left: 795px;
+}
+
+.home-display p {
+  font-family: 'Patua One', cursive;
+  font-size: 1.3rem;
+  color: #c7aa6f;
+  margin: auto;
+  margin: 5%;
+  text-align: center;
+}
+
+
+
+/* RESULTS TABLE */
 
 .results-table {
   border-collapse: collapse;
@@ -105,7 +140,7 @@ th {
   background-size: 100%;
   width: 35px;
   height: 35px;
-  margin-left: 5px;
+  margin-left: 10px;
   position: relative;
   transition: 1s;
 }
@@ -215,6 +250,15 @@ br {
   width: 50%;
   height: 50px;
   content: " ";
+}
+
+.page-line-break {
+  width: 80%;
+  border-bottom: solid 1px #c7aa6f;
+  content: " ";
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 /* LARGE CONTAINERS AND BACKGROUNDS */
@@ -385,6 +429,7 @@ br {
   background-color: #1e2328;
   color: #fdd88e;
   position: relative;
+  margin-bottom: 10%;
 }
 
 .summoner-search-box {
@@ -434,12 +479,12 @@ br {
 }
 
 .tft-insights-logo-1 {
-  width: 250px;
+  width: 600px;
   height: auto;
   display: block;
   margin: auto;
-  margin-top: 5%;
-  margin-bottom: 3%;
+  margin-top: 10%;
+  margin-bottom: 6%;
 }
 
 /* FOOTER */
@@ -667,6 +712,19 @@ select {
   margin-top: 1%;
   margin-bottom: 1%;
 }
+
+/* CHARTS */
+.chart-container {
+  background-color: #1e2328;
+  border: solid 2px #c7aa6f;
+  box-shadow: 0px 0px 5px black;
+  width: 60%;
+  margin-left: 28.2%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  padding: 10px;
+}
+
 /* ANALYSIS SELECTION TABLE */
 
 .selection-table {
@@ -723,7 +781,7 @@ select {
 
 .selection-button:checked + .rank-div {
   transition: 0.25s;
-  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px #fdd88e;
 }
 
 .selection-button-label div {
@@ -735,17 +793,20 @@ select {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  border-radius: 100%;
+  border-radius: 50%;
+  border: solid 1px #c7aa6f;
   cursor: pointer;
 }
 
 .selection-time-button {
+  font-family: 'Patua One', cursive;
+  color: #c7aa6f;
   margin: auto;
   margin-top: 5%;
   margin-bottom: 5%;
   width: 50%;
   padding: 10px;
-  border: solid 1px grey;
+  border: solid 1px #c7aa6f;
   background-color: rgba(0, 0, 0, 0.459);
   cursor: pointer;
   font-size: 0.7rem;
@@ -753,12 +814,12 @@ select {
 }
 
 .selection-time-button:hover {
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px #fdd88e;
 }
 
 .selection-button:checked + div {
   transition: 0.25s;
-  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px #fdd88e;
 }
 
 .selection-challenger-image {
@@ -783,19 +844,19 @@ select {
 
 
 .selection-challenger-image:hover {
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px #fdd88e;
 }
 
 .selection-all-image:hover {
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px #fdd88e;
 }
 
 .selection-grandmaster-image:hover {
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px #fdd88e;
 }
 
 .selection-master-image:hover {
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px #fdd88e;
 }
 
 .selection-table-body-selections {

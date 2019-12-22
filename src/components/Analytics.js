@@ -5,6 +5,7 @@ import SelectionTable from "./SelectionTable";
 import TierResults from "./TierResults";
 import { orderBy } from "lodash";
 import { tierValueOrder } from "../helpers";
+import GraphBox from "./GraphBox";
 
 class Analytics extends React.Component {
 	state = {
@@ -244,6 +245,7 @@ class Analytics extends React.Component {
 					handleTraitChange={this.handleTraitChange}
 					handleTraitClear={this.handleTraitClear}
 				/>
+				<GraphBox />
 				<TierResults
 					results={this.state.filteredResults}
 					reOrderBy={this.reOrderBy}

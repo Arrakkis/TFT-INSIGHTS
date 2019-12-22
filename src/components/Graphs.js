@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/App.css";
 import NavBar from "./NavBar";
+import GraphBox from "./GraphBox";
 
 class Graphs extends React.Component {
 	render() {
@@ -22,6 +23,7 @@ class Graphs extends React.Component {
 						A P P E N D I X
 					</a>
 				</div>
+				<GraphBox />
 			</span>
 		);
 	}

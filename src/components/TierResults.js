@@ -248,9 +248,6 @@ class TierResults extends React.Component {
 									C O M P O S T I O N
 								</th>
 								<th className="results-table-header-head">
-									T I M E S{" - "}P L A Y E D
-								</th>
-								<th className="results-table-header-head">
 									<div className="tooltip-button">
 										ℹ
 										<span>
@@ -370,7 +367,6 @@ class TierResults extends React.Component {
 												></div>
 											</div>
 										</td>
-										<td className="results-table-body-games"></td>
 										<td className="results-table-body-popularity">
 											{ratioToPercentage(result.popularity)}
 											<div

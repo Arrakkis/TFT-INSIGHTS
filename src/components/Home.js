@@ -1,7 +1,10 @@
 import React from "react";
 import "../css/App.css";
 import NavBar from "./NavBar";
-import logo from "../css/Images/logo2.png";
+import logo from "../css/Images/tftInsightsLogo2.png";
+import compResults from "../css/Images/compResults.png";
+import graphExample from "../css/Images/graphExample.png";
+import rankDist from "../css/Images/rankDist.png";
 
 class Home extends React.Component {
 	nameRef = React.createRef();
@@ -40,6 +43,36 @@ class Home extends React.Component {
 						&raquo;
 					</button>
 				</form>
+				<div className="page-line-break"></div>
+				<div className="home-display">
+					<img
+						style={{ minWidth: "415px", minHeight: "215px" }}
+						src={graphExample}
+						alt="graph example"
+					/>
+					<p>
+						Dynamic graphs and displays to decompose and analyze important
+						metrics, and stay ahead of the curve.
+						<br />
+					</p>
+				</div>
+				<div className="page-line-break"></div>
+				<div className="home-display">
+					<p>
+						Improve your rank and increase your skill with analysis customized
+						from your own behaviors and playstyles.
+					</p>
+					<img src={rankDist} alt="iron rank" />
+				</div>
+				<div className="page-line-break"></div>
+				<div className="home-display">
+					<img src={compResults} alt="challenger rank" />
+					<p>
+						Access complex statistical models and develop new insights into the
+						current meta. Adapt, and dominate.
+					</p>
+				</div>
+				<div className="page-line-break"></div>
 			</span>
 		);
 	}
